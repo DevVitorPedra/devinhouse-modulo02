@@ -1,0 +1,12 @@
+Sistema: componentização em moléculas
+Moléculas={
+Top-Menu: Menu superior com logo, barra de menus com 3 áreas, news e lista de jogos, e searchbar,
+Side-Menu: Menu lateral expansivo, com ícones de plataformas, tipos e recomendados,
+Footer-Menu: Menu inferior com listas e placeholders,
+Tela central: Display central para alteração da página com fundo de universo e  placeholder de loading,
+Game-Cards:card para display inicial dos jogos, simples com imagem,título e categoria,
+News-Card: Card full-widecom imagem, título e descrição da noticia o card inteiro é um link,
+Single-Game-Page: página com um Hero superior, automático e com as imagens menores embaixo,título do jogo, categoria
+descrição e requisítos, formulário de comentário, e comentários já existentes ou placeholder, "nenhum comentário, seja o priemiro",
+
+}
