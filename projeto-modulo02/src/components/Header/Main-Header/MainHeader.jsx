@@ -1,12 +1,11 @@
 import React from 'react'
-import Logo from '../Logo/Logo'
-import TopMenu from '../Top-Menu/TopMenu'
+import MainLogo from '../Logo/Logo'
+
 
 export default function MainHeader() {
     return (
         <div className="header">
-            <Logo/>
-            <TopMenu/>
+            <MainLogo/>
         </div>
     )
 }
