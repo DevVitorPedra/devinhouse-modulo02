@@ -4,10 +4,12 @@ export const StyledDisplay = styled.div`
 border-radius:12px;
     width:100%;
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
+    flex-wrap:wrap;
     align-items:center;
+    justify-content:center;
     overflow-y:scroll;
-    gap:5px;
+    gap:8px;
     height:400px;
     background-color:${props=>props.theme.colors.background};
     box-shadow:0px 0px 10px 5px ${props=>props.theme.colors.primary};
