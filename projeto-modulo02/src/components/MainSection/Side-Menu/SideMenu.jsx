@@ -1,15 +1,19 @@
 import React from 'react'
 import { SideMenuBoard, SideMenuButtons } from './styles/StyledSideMenu'
+import { Link } from 'react-router-dom'
 
 
 export default function SideMenu() {
     return (
         
      <SideMenuBoard>
-         <input/>
-       <SideMenuButtons backgroundcolor="red"> Categorias</SideMenuButtons>
-         <SideMenuButtons backgroundcolor="yellow">Plataformas</SideMenuButtons>
-         <SideMenuButtons  backgroundcolor="green"></SideMenuButtons>
+         <label htmlFor="search">Pesquisar</label>
+         <input type="text" />
+         <SideMenuButtons  backgroundcolor="green"><Link to={'/gameslist'}>Todos os jogos</Link></SideMenuButtons>
+         <SideMenuButtons backgroundcolor="red"> <Link to={'/news'}>Notícias</Link></SideMenuButtons>
+         
+         
+        
      </SideMenuBoard>
      
     )
