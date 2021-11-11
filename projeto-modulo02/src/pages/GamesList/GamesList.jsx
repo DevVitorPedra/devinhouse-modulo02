@@ -10,8 +10,6 @@ export default function GamesList() {
       fetchingGames()
     }, []);
 
-
-
 const options = {
   method: 'GET',
   url: 'https://mmo-games.p.rapidapi.com/games',
@@ -32,10 +30,10 @@ const fetchingGames = async() =>{
 console.log(games)
     return (
         (!games)?<StyledNewsLoading/>:(
-            games.map((element,idx)=>{
+            games.map((element)=>{
                 return (
-                <StyledGamesCard key={idx+1}>
-                    <Link to={"/gamedetails/:id"}>
+                <StyledGamesCard key={element.id}>
+                    <Link to={`/gamedetails/${element.id}`}>
                     <StyledGamesImg src={element.thumbnail}/>
                     <StyledGamesTitle>{element.title}</StyledGamesTitle>
                     <StyledGamesDescription>{element.short_description}</StyledGamesDescription>

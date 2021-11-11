@@ -17,7 +17,7 @@ border-radius:12px;
 box-shadow:0px 0px 30px 5px ${props=>props.theme.colors.primary};
 width: 100%;
 
-height: 200px;
+height: 180px;
 background-image: url(${logobg});
 background-position:center;
 background-size: cover;

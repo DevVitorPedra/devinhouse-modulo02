@@ -12,7 +12,7 @@ export default function PagesDisplay() {
             <Route path="/" element={<Intro/>}/>
             <Route path="/news" element={<News/>}/>
             <Route path="/gameslist" element={<GamesList/>}/>
-            <Route path="/gamedetails/:id" element={<GameDetails/>}/>
+            <Route path="/gamedetails/:id" element={<GameDetails />}/>
 
         </Routes>
        
