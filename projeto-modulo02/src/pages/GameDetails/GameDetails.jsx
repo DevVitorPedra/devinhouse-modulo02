@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useReducer } from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { StyledGameDetailsCard, StyledGameDetailsDivCard, StyledGameDetailsH3, StyledGamedetailsImg, StyledGameDetailsP, StyledGameDetailsReq, StyledGameDetailsSubtitles, StyledGameDetailsTitle } from './styles/StyledGameDetails';
@@ -6,6 +6,8 @@ import { StyledNewsLoading } from '../News/styles/StyledNewsCard';
 import Slider from '../../components/Slider/Slider';
 import Comments from '../../components/Comments/Comments';
 import commentSave from '../../utils/commentSaver';
+import ShowComments from '../../components/ShowComments/ShowComments';
+import commentLoader from '../../utils/commentLoader';
 
 
 
@@ -14,6 +16,7 @@ export default function GameDetails() {
     console.log(match.id)
 
     const [game, setGame] = useState();
+    const [comments, dispatch] = useReducer(updateComments,[])
     console.log(game)
     useEffect(() => {
         getDetails()
@@ -39,7 +42,7 @@ export default function GameDetails() {
     }
 
     return (
-        (!game) ? <StyledNewsLoading /> : (<>
+        (!game) ?<div style={{display:'flex',flexDirection:'column',alignItems:'center'}}> <StyledNewsLoading /></div> : (<>
             <StyledGameDetailsTitle>{game.title} </StyledGameDetailsTitle>
             <StyledGameDetailsP>({game.release_date})</StyledGameDetailsP>
             <Slider screenshots={game.screenshots} />
@@ -73,9 +76,9 @@ export default function GameDetails() {
                 </StyledGameDetailsReq>
             </StyledGameDetailsCard>
 
-            <Comments saver = {commentSave} />
+            <Comments saver = {commentSave} game={game.title}/>
 
-
+            <ShowComments name='vitor' comment="baita jogo" likes ='10'/>
         </>
         )
 

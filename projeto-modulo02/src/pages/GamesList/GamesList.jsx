@@ -29,7 +29,10 @@ const fetchingGames = async() =>{
 }
 console.log(games)
     return (
-        (!games)?<StyledNewsLoading/>:(
+        (!games)?<div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+        <h1>Loading...</h1>
+        <StyledNewsLoading/>
+        </div>:(
             games.map((element)=>{
                 return (
                 <StyledGamesCard key={element.id}>

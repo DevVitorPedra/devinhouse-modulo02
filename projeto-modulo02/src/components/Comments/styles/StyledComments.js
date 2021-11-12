@@ -45,9 +45,9 @@ export const StyledCommentsInput = styled.input`
 `
 export const StyledCommentsTextarea = styled.textarea`
     max-width:400px;
-    min-width:200px;
+    min-width:400px;
     min-height:50px;
-    max-height:100px;
+    max-height:50px;
     
 `
 export const StyledCommentsH1 = styled.h1`
@@ -56,6 +56,7 @@ export const StyledCommentsH1 = styled.h1`
 `
 export const StyledCommentsWarning = styled.p`
     color:red;
+    font-size:14px;
 `
 
 

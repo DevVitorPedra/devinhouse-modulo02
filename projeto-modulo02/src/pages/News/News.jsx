@@ -32,7 +32,8 @@ export default function News() {
     console.log(news)
     return (
         
-        (!news) ? <StyledNewsLoading /> :  (
+        (!news) ?<div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+            <h1>Loading...</h1> <StyledNewsLoading /></div> :  (
             
             news.map((element, idx) => {
                 

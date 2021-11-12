@@ -12,12 +12,12 @@ export default function Comments(props) {
          comment:''   
         },
         validationSchema:Yup.object({
-            name:Yup.string().required('Name is required'),
-            email:Yup.string().email("Invalid email format").required("Email is Required"),
-            comment:Yup.string().max(50,"max 50 Characters").required()
+            name:Yup.string().required('Nome é obrigatório'),
+            email:Yup.string().email("Invalid email format").required("Email é obrigatório"),
+            comment:Yup.string().max(50,"max 50 Characters").required('Comentário é obrigatório')
         }),
         onSubmit:({name, email, comment})=>{
-         props.saver(name,email,comment)
+         props.saver(props.game,name,email,comment)
         }
     })
  
@@ -28,7 +28,7 @@ export default function Comments(props) {
            <StyledCommentsForm onSubmit={handleSubmit}>
            <StyledCommentsInputsCard >
                <StyledCommentsInfoCard>
-                   <StyledCommentsInput onBlur={handleBlur} onChange={handleChange} value={values.name} name="name" placeholder="Name" type="text"/>
+                   <StyledCommentsInput onBlur={handleBlur} onChange={handleChange} value={values.name} name="name" placeholder="Nome" type="text"/>
                   
                    <StyledCommentsInput onBlur={handleBlur} onChange={handleChange} value={values.email} name="email" placeholder="Email" type="text"/>
                   
