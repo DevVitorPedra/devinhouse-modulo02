@@ -33,11 +33,6 @@ export const StyledNewsDescription= styled.p`
     
 
 `
-export const StyledNewsInfo = styled.div`
-    display:flex;
-    flex-direction:column;
-
-`
 
 export const StyledNewsLoading = styled.img`
     width:500px;

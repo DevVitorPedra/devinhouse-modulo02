@@ -1,5 +1,4 @@
 import React, { useState,useEffect } from 'react'
-import axios from 'axios';
 import { StyledNewsLoading } from '../News/styles/StyledNewsCard';
 import { StyledGamesCard, StyledGamesDescription, StyledGamesImg, StyledGamesTitle } from './styles/StyledGamesList';
 import { Link } from 'react-router-dom';
