@@ -8,7 +8,7 @@ import Comments from '../../components/Comments/Comments';
 import commentSave from '../../utils/commentSaver';
 import ShowComments from '../../components/ShowComments/ShowComments';
 import commentLoader from '../../utils/commentLoader';
-
+import getDetails from '../../utils/detailsFetcher';
 
 
 export default function GameDetails() {
@@ -16,31 +16,12 @@ export default function GameDetails() {
     console.log(match.id)
 
     const [game, setGame] = useState();
-    const [comments, dispatch] = useReducer(updateComments,[])
+   // const [comments, dispatch] = useReducer(updateComments,[])
     console.log(game)
     useEffect(() => {
-        getDetails()
+        getDetails(match.id,setGame)
     }, []);
-    const getDetails = async () => {
-
-        const options = {
-            method: 'GET',
-            url: `https://mmo-games.p.rapidapi.com/game`,
-            params: { id: `${match.id}` },
-            headers: {
-                'x-rapidapi-host': 'mmo-games.p.rapidapi.com',
-                'x-rapidapi-key': 'a57976d07amshc41a6c736c88fd7p1c5fd4jsn677ba99c4864'
-            }
-        };
-
-        await axios.request(options).then(function (response) {
-            console.log(response.data);
-            setGame(response.data)
-        }).catch(function (error) {
-            console.error(error);
-        });
-    }
-
+ 
     return (
         (!game) ?<div style={{display:'flex',flexDirection:'column',alignItems:'center'}}> <StyledNewsLoading /></div> : (<>
             <StyledGameDetailsTitle>{game.title} </StyledGameDetailsTitle>

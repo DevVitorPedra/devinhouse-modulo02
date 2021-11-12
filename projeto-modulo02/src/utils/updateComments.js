@@ -1,3 +1,4 @@
-export default function updateComments(){
+export default function updateComments(allComments){
     
+
 }
