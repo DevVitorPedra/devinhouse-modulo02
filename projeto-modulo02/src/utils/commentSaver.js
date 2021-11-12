@@ -1,8 +1,6 @@
 
 
-export default function commentSave (game,name,email,details){
-        
-        
+export default function commentSave (id,name,email,details){
         const comment = {
 
             name:name,
@@ -10,16 +8,13 @@ export default function commentSave (game,name,email,details){
             comment:details,
             likes:0
         }
-        
-     
-        
-        if(localStorage.getItem(game)){
-                const gameComments = JSON.parse(localStorage.getItem(game))
+        if(localStorage.getItem(id)){
+                const gameComments = JSON.parse(localStorage.getItem(id))
                 gameComments.push(comment)
             
-          localStorage.setItem(game, JSON.stringify(gameComments))
+          localStorage.setItem(id, JSON.stringify(gameComments))
         }else{
 
-        localStorage.setItem(game, JSON.stringify([comment]))
+        localStorage.setItem(id, JSON.stringify([comment]))
         }
 }

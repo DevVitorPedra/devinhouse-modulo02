@@ -1,7 +1,7 @@
-import React, { useState, useEffect,useReducer } from 'react'
-import axios from 'axios';
+import React, { useState, useEffect } from 'react'
+
 import { useParams } from 'react-router-dom';
-import { StyledGameDetailsCard, StyledGameDetailsDivCard, StyledGameDetailsH3, StyledGamedetailsImg, StyledGameDetailsP, StyledGameDetailsReq, StyledGameDetailsSubtitles, StyledGameDetailsTitle } from './styles/StyledGameDetails';
+import { StyledGameDetailsCard, StyledGameDetailsDivCard, StyledGameDetailsH3, StyledGameDetailsP, StyledGameDetailsReq, StyledGameDetailsSubtitles, StyledGameDetailsTitle } from './styles/StyledGameDetails';
 import { StyledNewsLoading } from '../News/styles/StyledNewsCard';
 import Slider from '../../components/Slider/Slider';
 import Comments from '../../components/Comments/Comments';
@@ -13,13 +13,14 @@ import getDetails from '../../utils/detailsFetcher';
 
 export default function GameDetails() {
     const match = useParams()
-    console.log(match.id)
+    const [comments, setComments] = useState([])
 
     const [game, setGame] = useState();
-   // const [comments, dispatch] = useReducer(updateComments,[])
-    console.log(game)
+    
     useEffect(() => {
         getDetails(match.id,setGame)
+       setComments(commentLoader(match.id))
+    
     }, []);
  
     return (
@@ -57,9 +58,10 @@ export default function GameDetails() {
                 </StyledGameDetailsReq>
             </StyledGameDetailsCard>
 
-            <Comments saver = {commentSave} game={game.title}/>
-
-            <ShowComments name='vitor' comment="baita jogo" likes ='10'/>
+            <Comments saver = {commentSave} id={game.id}/>
+            {comments.map((element,idx)=>{
+                return (<ShowComments id={idx} key={idx+1} name = {element.name} comment={element.comment} likes={element.likes}/>)
+            })}
         </>
         )
 
