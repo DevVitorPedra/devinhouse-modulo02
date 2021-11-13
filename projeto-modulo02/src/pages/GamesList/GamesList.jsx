@@ -14,14 +14,17 @@ export default function GamesList() {
     console.log(games)
     return (
         (!games) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-             <StyledCommentsH1>Loading...</StyledCommentsH1>
+            <StyledCommentsH1>Loading...</StyledCommentsH1>
             <StyledNewsLoading />
         </div> : (
             <>
                 <StyledCommentsInfoCard> <SearchBar search='' /></StyledCommentsInfoCard>
+
                 <GamesListRender info={games} />
             </>
 
         )
     )
 }
+
+//TODO numero de itens na tela

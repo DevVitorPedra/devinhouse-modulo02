@@ -10,7 +10,8 @@ export const  Light = {
         textHover:'white',
         backgroundHover:'#002869',
         themeBtn:'lightblue',
-        themeBG:'black'
+        themeBG:'black',
+        hoverGames:'#0264ED'
 
     },
 }
@@ -24,6 +25,7 @@ export const Dark = {
         btns:'purple',
         textHover:'white',
         backgroundHover:'black',
+        hoverGames:'black',
         themeBtn:'yellow',
         themeBG:'lightblue'
     }

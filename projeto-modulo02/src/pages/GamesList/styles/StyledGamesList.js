@@ -18,7 +18,7 @@ export const StyledGamesCard = styled.div`
     :hover{
         text-shadow: 0px 0px 25px  ${props =>props.theme.colors.shadows};
         color: ${props =>props.theme.colors.textHover};
-        background-color:${props =>props.theme.colors.backgroundHover};
+        background-color:${props =>props.theme.colors.hoverGames};
         a{
         color:${props =>props.theme.colors.textHover};
         text-decoration:none;
