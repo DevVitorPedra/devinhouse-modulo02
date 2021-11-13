@@ -8,7 +8,6 @@ export default function MainLogo() {
   return (
     <Logo className="logo">
       <StyledLogo>DEVinMMO</StyledLogo>
-      <ThemeButton/>
     </Logo>
   )
 }

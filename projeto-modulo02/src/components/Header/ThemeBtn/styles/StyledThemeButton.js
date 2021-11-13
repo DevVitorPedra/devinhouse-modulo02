@@ -9,7 +9,7 @@ export const StyledThemeButton = styled.button`
     height:30px;
     font-size:18px;
     color:${props =>props.theme.colors.themeBtn};
-    background-color:lightblue;
+    background-color:${props =>props.theme.colors.themeBG};
 `
 //<i class="bi bi-moon-stars-fill"></i> moon
 //<i class="bi bi-brightness-low-fill"></i> sun

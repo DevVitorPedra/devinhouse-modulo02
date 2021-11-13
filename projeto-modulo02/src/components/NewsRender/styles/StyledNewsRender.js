@@ -8,13 +8,14 @@ justify-content:flex-start;
 align-items:center;
 gap:10px;
 width:100%;
+color:${props=>props.theme.colors.text};
 min-height:150px;
 border-radius:12px;
-border:2px solid white;
+border:2px solid ${props =>props.theme.colors.border};
 :hover{
-        text-shadow: 0px 0px 18px  ${props =>props.theme.colors.purple};
-        color: ${props =>props.theme.colors.primary};
-        background-color:#101010;
+        text-shadow: 0px 0px 28px  ${props =>props.theme.colors.shadows};
+        color: ${props =>props.theme.colors.textHover};
+        background-color:${props =>props.theme.colors.backgroundHover};
 
     }
 `
@@ -25,7 +26,7 @@ border-radius:10px;
 
 `
 export const StyledNewsTitle = styled.h2`
-    color:black;
+   
    
 
 `
@@ -37,7 +38,7 @@ export const StyledNewsDescription= styled.p`
 
 export const StyledLink = styled.a`
     text-decoration:none;
-    color:black;
+    color:white;
     border-radius:12px;
     width:100%;
    

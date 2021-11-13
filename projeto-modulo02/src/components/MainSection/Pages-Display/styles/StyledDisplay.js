@@ -12,14 +12,10 @@ border-radius:12px;
     gap:8px;
     height:400px;
     background-color:${props=>props.theme.colors.background};
-    box-shadow:0px 0px 10px 5px ${props=>props.theme.colors.primary};
+    box-shadow:0px 0px 10px 5px ${props=>props.theme.colors.shadows};
     margin-left:10px;
     margin-top:10px;
     ::-webkit-scrollbar {
         display: none;
     }
-`
-export const StyledLabel = styled.label`
-    color:white;
-
 `

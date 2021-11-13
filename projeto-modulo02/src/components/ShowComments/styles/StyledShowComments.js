@@ -6,7 +6,7 @@ export const StyledShowCommentsCard = styled.div`
     display:flex;
     justify-content:space-between;
     gap:10px;
-    border:2px solid white;
+    border:2px solid ${props =>props.theme.colors.border};
     border-radius:12px;
     padding:10px;
 
@@ -19,11 +19,11 @@ export const StyledShowSingleComment= styled.div`
     
 `
 
-export const StyledShowName = styled.h3`
-    color:black;
-    font-size:14px;
+export const StyledShowName = styled.h2`
+    color:${props=>props.theme.colors.text};
+    font-size:16px;
 `
 export const StyledShowCommentP=styled.p`
 font-size:14px;
-color:black;
+color:${props=>props.theme.colors.text};
 `

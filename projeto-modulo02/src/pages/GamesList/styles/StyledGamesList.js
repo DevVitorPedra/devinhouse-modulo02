@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const StyledGamesCard = styled.div`
-    border:2px solid white;
+    border:2px solid  ${props =>props.theme.colors.border};;
     width:24%;
-    
+    color:${props =>props.theme.colors.text};
     height:100%;
     border-radius:12px;
     display:flex;
@@ -14,15 +14,19 @@ export const StyledGamesCard = styled.div`
    display: -webkit-box;
    -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-    color:white;
+    
     :hover{
-        text-shadow: 0px 0px 8px  ${props =>props.theme.colors.purple};
-        color: ${props =>props.theme.colors.primary};
-        background-color:#101010;
+        text-shadow: 0px 0px 25px  ${props =>props.theme.colors.shadows};
+        color: ${props =>props.theme.colors.textHover};
+        background-color:${props =>props.theme.colors.backgroundHover};
+        a{
+        color:${props =>props.theme.colors.textHover};
+        text-decoration:none;
+    }
 
     }
     a{
-        color:white;
+        color:black;
         text-decoration:none;
     }
 
@@ -34,9 +38,11 @@ export const StyledGamesImg = styled.img`
 `
 export const StyledGamesTitle = styled.h2`
 margin-top:5px;
+color:${props =>props.theme.colors.text};
   
 `
 export const StyledGamesDescription = styled.p`
+color: ${props =>props.theme.colors.text};
 margin-top:15px;
     overflow: hidden;
    text-overflow: ellipsis;
