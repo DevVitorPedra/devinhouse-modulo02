@@ -13,8 +13,8 @@ import getDetails from '../../utils/detailsFetcher';
 
 export default function GameDetails() {
     const match = useParams()
-    const [comments, setComments] = useState([])
-
+    const [comments, setComments] = useState()
+    console.log(comments)
     const [game, setGame] = useState();
     
     useEffect(() => {
@@ -59,9 +59,10 @@ export default function GameDetails() {
             </StyledGameDetailsCard>
 
             <Comments saver = {commentSave} id={game.id}/>
+           (
             {comments.map((element,idx)=>{
-                return (<ShowComments id={idx} key={idx+1} name = {element.name} comment={element.comment} likes={element.likes}/>)
-            })}
+                return (<ShowComments gameId={match.id} id={idx} key={idx+1} name = {element.name} comment={element.comment} likes={element.likes}/>)
+            })})
         </>
         )
 

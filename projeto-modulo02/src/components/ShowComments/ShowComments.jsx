@@ -13,7 +13,7 @@ export default function ShowComments(props) {
                             {props.comment}
                         </StyledShowCommentP>
                     </StyledShowSingleComment>
-                   <CommentsVotes id={props.id} likes = {props.likes}/>
+                   <CommentsVotes gameId={props.gameId} id={props.id} likes={props.likes}/>
                 </StyledShowSingleComment>
             </StyledShowCommentsCard>
     )
