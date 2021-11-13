@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const StyledGamesCard = styled.div`
     border:2px solid white;
     width:24%;
-    
     height:100%;
     border-radius:12px;
     display:flex;

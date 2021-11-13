@@ -8,7 +8,7 @@ export default function SideMenu() {
     return (
 
         <SideMenuBoard>
-            <SideMenuButtons backgroundcolor="green"><Link to={'/gameslist'}>Todos os jogos</Link></SideMenuButtons>
+            <SideMenuButtons backgroundcolor="green"><Link to={'/gameslist'}>Jogos</Link></SideMenuButtons>
             <SideMenuButtons backgroundcolor="red"> <Link to={'/news'}>Notícias</Link></SideMenuButtons>
 
 

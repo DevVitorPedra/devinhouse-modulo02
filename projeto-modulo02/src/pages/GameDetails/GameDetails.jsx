@@ -16,9 +16,9 @@ export default function GameDetails() {
     const { value, setValue } = useContext(SearchContext)
     const match = useParams()
     const [comments, setComments] = useState()
-    console.log(comments)
+    
     const [game, setGame] = useState();
-
+    console.log(game)
     useEffect(() => {
         getDetails(match.id, setGame)
         setComments(commentLoader(match.id))
@@ -34,10 +34,16 @@ export default function GameDetails() {
             <StyledGameDetailsP>({game.release_date})</StyledGameDetailsP>
             <Slider screenshots={game.screenshots} />
             <StyledGameDetailsCard>
-                <StyledGameDetailsDivCard><div>
-                    <StyledGameDetailsSubtitles>Gênero</StyledGameDetailsSubtitles>
-                    <StyledGameDetailsP>{game.genre}</StyledGameDetailsP>
-                </div>
+                {game.short_description}
+                
+            </StyledGameDetailsCard>
+            <StyledGameDetailsCard>
+                
+                <StyledGameDetailsDivCard>
+                    <div>
+                        <StyledGameDetailsSubtitles>Gênero</StyledGameDetailsSubtitles>
+                        <StyledGameDetailsP>{game.genre}</StyledGameDetailsP>
+                    </div>
                     <div>
                         <StyledGameDetailsSubtitles>Plataforma</StyledGameDetailsSubtitles>
                         <StyledGameDetailsP>{game.platform}</StyledGameDetailsP>

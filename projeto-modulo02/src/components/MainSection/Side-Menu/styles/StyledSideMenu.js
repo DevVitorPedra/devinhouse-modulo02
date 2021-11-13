@@ -8,7 +8,7 @@ flex-direction:column;
 align-items:center;
 padding:10px;
 margin-top:10px;
-height:400px;
+height:65vh;
 width:25%;
 background-color:${props=> props.theme.colors.background};
 border-radius:12px;
