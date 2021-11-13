@@ -1,35 +1,22 @@
-import React,{ useContext, createContext} from 'react'
+import React,{ useContext,useState} from 'react'
 import { StyledSearch } from './styles/StyledSearchBar'
-import * as Yup from 'yup'
-import { useFormik } from 'formik'
+import { SearchContext } from '../SearchContext/SearchContext'
 
 
 
 export default function SearchBar() {
-
- 
+    const [search,setSearch] = useState()
+ const {value, setValue} = useContext(SearchContext)
    
  
-    
-    const { handleSubmit, handleChange, values, handleBlur } = useFormik({
-        initialValues: {
-            searchInput: ''
-        },
-        validationSchema: Yup.object({
-            searchInput: Yup.string()
-        }),
-        onSubmit: ({ searchInput }) => {
-            console.log(searchInput)
-        },
-        onChange:({ searchInput   })=>{
-           
-        }
-        
-            
-    })
+    const handleChange= (inputValue) =>{
+        setSearch(inputValue)
+        setValue(inputValue)
+    }
+
     return (
-        <form onSubmit={handleSubmit} >
-            <StyledSearch onBlur={handleBlur} onChange={handleChange} value={values.searchInput} name="searchInput" placeholder="Pesquisar" type="text" />
+        <form  >
+            <StyledSearch onChange={(e)=>handleChange(e.target.value)} name="searchInput" value={search} placeholder="Pesquisar" type="text" />
         </form>
         
     )
