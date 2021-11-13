@@ -1,5 +1,4 @@
 [build]
-    CI =''
     command = "npm run build"
     publish = "/build"
     base = "/"
@@ -10,5 +9,3 @@
     to ="/index.html"
     status= 200
 
-    [build.environment]
-  NODE_VERSION="14.0.0"
