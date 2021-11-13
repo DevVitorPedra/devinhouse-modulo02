@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 
 import { useParams } from 'react-router-dom';
 import { StyledGameDetailsCard, StyledGameDetailsDivCard, StyledGameDetailsH3, StyledGameDetailsP, StyledGameDetailsReq, StyledGameDetailsSubtitles, StyledGameDetailsTitle } from './styles/StyledGameDetails';
@@ -9,9 +9,11 @@ import commentSave from '../../utils/commentSaver';
 import ShowComments from '../../components/ShowComments/ShowComments';
 import commentLoader from '../../utils/commentLoader';
 import getDetails from '../../utils/detailsFetcher';
+import { SearchContext } from '../../components/SearchContext/SearchContext';
 
 
 export default function GameDetails() {
+    const{value,setValue } = useContext(SearchContext)
     const match = useParams()
     const [comments, setComments] = useState()
     console.log(comments)
@@ -20,7 +22,9 @@ export default function GameDetails() {
     useEffect(() => {
         getDetails(match.id,setGame)
        setComments(commentLoader(match.id))
-    
+    return ()=>{
+            setValue('')
+    }
     }, []);
  
     return (
