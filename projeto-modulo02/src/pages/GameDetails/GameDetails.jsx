@@ -24,6 +24,7 @@ export default function GameDetails() {
     }, []);
  
     return (
+        
         (!game) ?<div style={{display:'flex',flexDirection:'column',alignItems:'center'}}> <StyledNewsLoading /></div> : (<>
             <StyledGameDetailsTitle>{game.title} </StyledGameDetailsTitle>
             <StyledGameDetailsP>({game.release_date})</StyledGameDetailsP>
@@ -59,12 +60,16 @@ export default function GameDetails() {
             </StyledGameDetailsCard>
 
             <Comments saver = {commentSave} id={game.id}/>
-           (
-            {comments.map((element,idx)=>{
-                return (<ShowComments gameId={match.id} id={idx} key={idx+1} name = {element.name} comment={element.comment} likes={element.likes}/>)
-            })})
+            
+           { (!comments) ? <h1>no comments yet</h1> :comments.map((element,idx)=>{return (<ShowComments gameId={match.id} id={idx} key={idx+1} name = {element.name} comment={element.comment} likes={element.likes}/>)})}
+            
+    
+          
         </>
+      
+        
         )
+        
 
     )
 }
