@@ -10,6 +10,7 @@ export const  Light = {
         background:"#0a2239",
         text:"#ffffff",
         shadow:"black",
+        themeBtn:'#0A0945'
         
 
     },
@@ -20,9 +21,10 @@ export const Dark = {
         primary:"0a2239",
         secondary:"#f1f1f1",
         yellow:"#fff212",
-        purple:"#bc003d",
+        purple:"blue",
         lightbackground:"#25408f",
-        background:"#0a2239"
+        background:"#0a2239",
+        themeBtn:'#855200'
 
     }
 }
