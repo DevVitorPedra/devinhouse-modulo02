@@ -71,7 +71,7 @@ export default function GameDetails() {
 
             <Comments saver={commentSave} id={game.id} />
 
-            {(!comments) ? <h1>Nenhum comentário ainda...</h1> : comments.map((element, idx) => { return (<ShowComments gameId={match.id} id={idx} key={idx + 1} name={element.name} comment={element.comment} likes={element.likes} />) })}
+            {(!comments) ? <StyledGameDetailsH3>Nenhum comentário ainda...</StyledGameDetailsH3> : comments.map((element, idx) => { return (<ShowComments gameId={match.id} id={idx} key={idx + 1} name={element.name} comment={element.comment} likes={element.likes} />) })}
 
 
 
