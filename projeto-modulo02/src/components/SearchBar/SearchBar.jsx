@@ -5,7 +5,7 @@ import { SearchContext } from '../SearchContext/SearchContext'
 
 
 export default function SearchBar() {
-    const [search,setSearch] = useState()
+    const [search,setSearch] = useState('')
  const {value, setValue} = useContext(SearchContext)
    
  
