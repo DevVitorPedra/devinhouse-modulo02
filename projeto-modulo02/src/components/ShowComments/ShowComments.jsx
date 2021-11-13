@@ -4,17 +4,17 @@ import { StyledShowCommentP, StyledShowCommentsCard, StyledShowName, StyledShowS
 
 export default function ShowComments(props) {
     return (
-            <StyledShowCommentsCard>
+        <StyledShowCommentsCard>
+            <StyledShowSingleComment>
                 <StyledShowSingleComment>
-                    <StyledShowSingleComment>
-                        <StyledShowName>{props.name}</StyledShowName>
-                        <br />
-                        <StyledShowCommentP>
-                            {props.comment}
-                        </StyledShowCommentP>
-                    </StyledShowSingleComment>
-                   <CommentsVotes gameId={props.gameId} id={props.id} likes={props.likes}/>
+                    <StyledShowName>{props.name}</StyledShowName>
+                    <br />
+                    <StyledShowCommentP>
+                        {props.comment}
+                    </StyledShowCommentP>
                 </StyledShowSingleComment>
-            </StyledShowCommentsCard>
+                <CommentsVotes gameId={props.gameId} id={props.id} likes={props.likes} />
+            </StyledShowSingleComment>
+        </StyledShowCommentsCard>
     )
 }

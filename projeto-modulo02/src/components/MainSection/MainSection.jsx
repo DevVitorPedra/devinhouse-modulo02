@@ -6,8 +6,8 @@ import { StyledMainSection } from './styles/styles'
 export default function MainSection() {
     return (
         <StyledMainSection>
-            <SideMenu/>
-            <PagesDisplay/>
+            <SideMenu />
+            <PagesDisplay />
         </StyledMainSection>
     )
 }

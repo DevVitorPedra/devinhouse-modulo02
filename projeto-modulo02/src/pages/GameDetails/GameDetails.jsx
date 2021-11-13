@@ -13,23 +13,23 @@ import { SearchContext } from '../../components/SearchContext/SearchContext';
 
 
 export default function GameDetails() {
-    const{value,setValue } = useContext(SearchContext)
+    const { value, setValue } = useContext(SearchContext)
     const match = useParams()
     const [comments, setComments] = useState()
     console.log(comments)
     const [game, setGame] = useState();
-    
+
     useEffect(() => {
-        getDetails(match.id,setGame)
-       setComments(commentLoader(match.id))
-    return ()=>{
+        getDetails(match.id, setGame)
+        setComments(commentLoader(match.id))
+        return () => {
             setValue('')
-    }
+        }
     }, []);
- 
+
     return (
-        
-        (!game) ?<div style={{display:'flex',flexDirection:'column',alignItems:'center'}}> <StyledNewsLoading /></div> : (<>
+
+        (!game) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> <StyledNewsLoading /></div> : (<>
             <StyledGameDetailsTitle>{game.title} </StyledGameDetailsTitle>
             <StyledGameDetailsP>({game.release_date})</StyledGameDetailsP>
             <Slider screenshots={game.screenshots} />
@@ -63,17 +63,17 @@ export default function GameDetails() {
                 </StyledGameDetailsReq>
             </StyledGameDetailsCard>
 
-            <Comments saver = {commentSave} id={game.id}/>
-            
-           { (!comments) ? <h1>no comments yet</h1> :comments.map((element,idx)=>{return (<ShowComments gameId={match.id} id={idx} key={idx+1} name = {element.name} comment={element.comment} likes={element.likes}/>)})}
-            
-    
-          
+            <Comments saver={commentSave} id={game.id} />
+
+            {(!comments) ? <h1>Nenhum comentário ainda...</h1> : comments.map((element, idx) => { return (<ShowComments gameId={match.id} id={idx} key={idx + 1} name={element.name} comment={element.comment} likes={element.likes} />) })}
+
+
+
         </>
-      
-        
+
+
         )
-        
+
 
     )
 }

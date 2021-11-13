@@ -18,10 +18,8 @@ export default function GamesList() {
             <StyledNewsLoading />
         </div> : (
             <>
-            <StyledCommentsInfoCard> <SearchBar search='' /></StyledCommentsInfoCard>
-               
+                <StyledCommentsInfoCard> <SearchBar search='' /></StyledCommentsInfoCard>
                 <GamesListRender info={games} />
-                
             </>
 
         )

@@ -3,17 +3,17 @@ import { SearchContext } from '../SearchContext/SearchContext'
 
 import { StyledLink, StyledNewsCard, StyledNewsDescription, StyledNewsTitle, StyledNewsImg } from './styles/StyledNewsRender'
 export default function NewsRender(props) {
-    
-    const { value }=useContext(SearchContext)
-    const filtered = props.info.filter((element)=>{
-       return element.title.toLowerCase().includes(value.toLowerCase())
+
+    const { value } = useContext(SearchContext)
+    const filtered = props.info.filter((element) => {
+        return element.title.toLowerCase().includes(value.toLowerCase())
     })
-    console.log(filtered)
- 
+    
+
     return (
         filtered.map((element, idx) => {
-            
-              return (
+
+            return (
                 <StyledLink key={idx + 1} href={element.article_url} target="_blank">
                     <StyledNewsCard >
                         <StyledNewsImg src={element.thumbnail} />
@@ -25,6 +25,6 @@ export default function NewsRender(props) {
                 </StyledLink>
             )
         })
-        
+
     )
 }

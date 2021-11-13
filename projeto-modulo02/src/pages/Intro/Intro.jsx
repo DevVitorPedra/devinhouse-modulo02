@@ -4,7 +4,7 @@ import { StyledNewsLoading } from '../News/styles/StyledNewsCard'
 export default function Intro() {
     return (
         <div>
-            <StyledNewsLoading/>
+            <StyledNewsLoading />
         </div>
     )
 }
