@@ -6,7 +6,7 @@ export default function NewsRender(props) {
     
     const { value }=useContext(SearchContext)
     const filtered = props.info.filter((element)=>{
-       return element.title.includes(value)
+       return element.title.toLowerCase().includes(value.toLowerCase())
     })
     console.log(filtered)
  
