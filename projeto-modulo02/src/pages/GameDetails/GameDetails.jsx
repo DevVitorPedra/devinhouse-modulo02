@@ -1,47 +1,30 @@
-import React, { useState, useEffect,useReducer } from 'react'
-import axios from 'axios';
+import React, { useState, useEffect } from 'react'
+
 import { useParams } from 'react-router-dom';
-import { StyledGameDetailsCard, StyledGameDetailsDivCard, StyledGameDetailsH3, StyledGamedetailsImg, StyledGameDetailsP, StyledGameDetailsReq, StyledGameDetailsSubtitles, StyledGameDetailsTitle } from './styles/StyledGameDetails';
+import { StyledGameDetailsCard, StyledGameDetailsDivCard, StyledGameDetailsH3, StyledGameDetailsP, StyledGameDetailsReq, StyledGameDetailsSubtitles, StyledGameDetailsTitle } from './styles/StyledGameDetails';
 import { StyledNewsLoading } from '../News/styles/StyledNewsCard';
 import Slider from '../../components/Slider/Slider';
 import Comments from '../../components/Comments/Comments';
 import commentSave from '../../utils/commentSaver';
 import ShowComments from '../../components/ShowComments/ShowComments';
 import commentLoader from '../../utils/commentLoader';
-
+import getDetails from '../../utils/detailsFetcher';
 
 
 export default function GameDetails() {
     const match = useParams()
-    console.log(match.id)
-
+    const [comments, setComments] = useState()
+    console.log(comments)
     const [game, setGame] = useState();
-    const [comments, dispatch] = useReducer(updateComments,[])
-    console.log(game)
+    
     useEffect(() => {
-        getDetails()
+        getDetails(match.id,setGame)
+       setComments(commentLoader(match.id))
+    
     }, []);
-    const getDetails = async () => {
-
-        const options = {
-            method: 'GET',
-            url: `https://mmo-games.p.rapidapi.com/game`,
-            params: { id: `${match.id}` },
-            headers: {
-                'x-rapidapi-host': 'mmo-games.p.rapidapi.com',
-                'x-rapidapi-key': 'a57976d07amshc41a6c736c88fd7p1c5fd4jsn677ba99c4864'
-            }
-        };
-
-        await axios.request(options).then(function (response) {
-            console.log(response.data);
-            setGame(response.data)
-        }).catch(function (error) {
-            console.error(error);
-        });
-    }
-
+ 
     return (
+        
         (!game) ?<div style={{display:'flex',flexDirection:'column',alignItems:'center'}}> <StyledNewsLoading /></div> : (<>
             <StyledGameDetailsTitle>{game.title} </StyledGameDetailsTitle>
             <StyledGameDetailsP>({game.release_date})</StyledGameDetailsP>
@@ -76,11 +59,17 @@ export default function GameDetails() {
                 </StyledGameDetailsReq>
             </StyledGameDetailsCard>
 
-            <Comments saver = {commentSave} game={game.title}/>
-
-            <ShowComments name='vitor' comment="baita jogo" likes ='10'/>
+            <Comments saver = {commentSave} id={game.id}/>
+            
+           { (!comments) ? <h1>no comments yet</h1> :comments.map((element,idx)=>{return (<ShowComments gameId={match.id} id={idx} key={idx+1} name = {element.name} comment={element.comment} likes={element.likes}/>)})}
+            
+    
+          
         </>
+      
+        
         )
+        
 
     )
 }

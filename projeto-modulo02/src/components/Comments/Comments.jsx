@@ -17,7 +17,7 @@ export default function Comments(props) {
             comment:Yup.string().max(50,"max 50 Characters").required('Comentário é obrigatório')
         }),
         onSubmit:({name, email, comment})=>{
-         props.saver(props.game,name,email,comment)
+         props.saver(props.id,name,email,comment)
         }
     })
  

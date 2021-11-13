@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyledShowCommentP, StyledShowCommentsCard, StyledShowDownVote, StyledShowName, StyledShowSingleComment, StyledShowUpVote, StyledShowVotes } from './styles/StyledShowComments'
+import CommentsVotes from '../CommentsVotes/CommentsVotes'
+import { StyledShowCommentP, StyledShowCommentsCard, StyledShowName, StyledShowSingleComment } from './styles/StyledShowComments'
 
 export default function ShowComments(props) {
     return (
@@ -12,11 +13,7 @@ export default function ShowComments(props) {
                             {props.comment}
                         </StyledShowCommentP>
                     </StyledShowSingleComment>
-                    <StyledShowVotes>
-                        <StyledShowUpVote><i className="bi bi-hand-thumbs-up-fill"></i></StyledShowUpVote>
-                        <p>{props.likes}</p>
-                        <StyledShowDownVote><i className="bi bi-hand-thumbs-down-fill"></i></StyledShowDownVote>
-                    </StyledShowVotes>
+                   <CommentsVotes gameId={props.gameId} id={props.id} likes={props.likes}/>
                 </StyledShowSingleComment>
             </StyledShowCommentsCard>
     )

@@ -1,34 +1,18 @@
 import React from 'react'
-import { StyledNewsLoading, StyledLink, StyledNewsCard, StyledNewsInfo, StyledNewsDescription, StyledNewsTitle, StyledNewsImg } from './styles/StyledNewsCard'
+import { StyledNewsLoading, StyledLink, StyledNewsCard, StyledNewsDescription, StyledNewsTitle, StyledNewsImg } from './styles/StyledNewsCard'
 import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom'
+import fetchingNews from '../../utils/newsFetcher'
 
 
 export default function News() {
     const [news, setNews] = useState();
 
     useEffect(() => {
-        fetchingNews()
+        fetchingNews(setNews)
 
     }, []);
-    const options = {
-        method: 'GET',
-        url: 'https://mmo-games.p.rapidapi.com/latestnews',
-        headers: {
-            'x-rapidapi-host': 'mmo-games.p.rapidapi.com',
-            'x-rapidapi-key': 'a57976d07amshc41a6c736c88fd7p1c5fd4jsn677ba99c4864'
-        }
-    };
-
-    const fetchingNews = async () => {
-        await axios.request(options).then(function (response) {
-            console.log(response.data)
-            setNews(response.data)
-        }).catch(function (error) {
-            console.error(error);
-        });
-    }
+  
+    
     console.log(news)
     return (
         

@@ -1,32 +1,15 @@
 import React, { useState,useEffect } from 'react'
-import axios from 'axios';
 import { StyledNewsLoading } from '../News/styles/StyledNewsCard';
 import { StyledGamesCard, StyledGamesDescription, StyledGamesImg, StyledGamesTitle } from './styles/StyledGamesList';
 import { Link } from 'react-router-dom';
-
+import fetchingGames from '../../utils/gamesListFetcher';
 export default function GamesList() {
     const [games, setGames] = useState();
     useEffect(() => {
-      fetchingGames()
+      fetchingGames(setGames)
     }, []);
 
-const options = {
-  method: 'GET',
-  url: 'https://mmo-games.p.rapidapi.com/games',
-  headers: {
-    'x-rapidapi-host': 'mmo-games.p.rapidapi.com',
-    'x-rapidapi-key': 'a57976d07amshc41a6c736c88fd7p1c5fd4jsn677ba99c4864'
-  }
-};
 
-const fetchingGames = async() =>{
-   await axios.request(options).then(function (response) {
-	console.log(response.data);
-    setGames(response.data)
-}).catch(function (error) {
-	console.error(error);
-});
-}
 console.log(games)
     return (
         (!games)?<div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledDisplay, StyledLabel } from './styles/StyledDisplay'
+import { StyledDisplay } from './styles/StyledDisplay'
 import { Routes, Route} from 'react-router-dom'
 import GamesList from '../../../pages/GamesList/GamesList'
 import News from '../../../pages/News/News'
