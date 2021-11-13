@@ -1,11 +1,15 @@
 import React from 'react'
-import { StyledNewsLoading, StyledLink, StyledNewsCard, StyledNewsDescription, StyledNewsTitle, StyledNewsImg } from './styles/StyledNewsCard'
+import { StyledNewsLoading } from './styles/StyledNewsCard'
+
 import { useState, useEffect } from 'react';
 import fetchingNews from '../../utils/newsFetcher'
 import SearchBar from '../../components/SearchBar/SearchBar';
+import NewsRender from '../../components/NewsRender/NewsRender';
+import { StyledCommentsInfoCard } from '../../components/Comments/styles/StyledComments';
 
 
 export default function News() {
+    
     const [news, setNews] = useState();
 
     useEffect(() => {
@@ -19,22 +23,12 @@ export default function News() {
      
         (!news) ?<div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
             <h1>Loading...</h1> <StyledNewsLoading /></div> :  (
-            
-            news.map((element, idx) => {
                 
-                return (
-                    <StyledLink key={idx + 1} href={element.article_url} target="_blank">
-                        <StyledNewsCard >
-                            <StyledNewsImg src={element.thumbnail} />
-                            <div>
-                                <StyledNewsTitle>{element.title}</StyledNewsTitle>
-                                <StyledNewsDescription>{element.short_description}</StyledNewsDescription>
-                            </div>
-                        </StyledNewsCard>
-                    </StyledLink>
-                )
-            })
-            
+                <>
+                <StyledCommentsInfoCard> <SearchBar search='' /></StyledCommentsInfoCard>
+                <NewsRender info={news}/>
+                </>
+   
         )
         
 )

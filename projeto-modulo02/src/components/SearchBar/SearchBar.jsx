@@ -1,36 +1,31 @@
-import React from 'react'
+import React,{ useContext, createContext} from 'react'
 import { StyledSearch } from './styles/StyledSearchBar'
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
-import {useParams} from 'react-router-dom'
+
+
 
 export default function SearchBar() {
-    const match=useParams()
-    console.log(match.url)
+
+ 
+   
+ 
+    
     const { handleSubmit, handleChange, values, handleBlur } = useFormik({
         initialValues: {
             searchInput: ''
         },
         validationSchema: Yup.object({
             searchInput: Yup.string()
-        })/*,
+        }),
         onSubmit: ({ searchInput }) => {
-            if (page === 'news') {
-                searchNews(searchInput)
-            } else if (page === 'gameslist') {
-                searchGames(searchInput)
-            }
+            console.log(searchInput)
         },
-        onChange:({
-            if (page === 'news') {
-                searchNews(searchInput)
-            } else if (page === 'gameslist') {
-                searchGames(searchInput)
-            }
+        onChange:({ searchInput   })=>{
+           
+        }
+        
             
-        })
-        */
-
     })
     return (
         <form onSubmit={handleSubmit} >
