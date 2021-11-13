@@ -34,7 +34,7 @@ export default function GameDetails() {
             <StyledGameDetailsP>({game.release_date})</StyledGameDetailsP>
             <Slider screenshots={game.screenshots} />
             <StyledGameDetailsCard>
-                {game.short_description}
+                <StyledGameDetailsP>{game.short_description}</StyledGameDetailsP>
                 
             </StyledGameDetailsCard>
             <StyledGameDetailsCard>
