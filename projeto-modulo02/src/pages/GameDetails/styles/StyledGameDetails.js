@@ -4,22 +4,22 @@ export const StyledGameDetailsCard = styled.div`
     height:100%auto;
     width:100%;
     border-radius:12px;
-    border:2px solid white;
+    border:2px solid ${props =>props.theme.colors.border};
 `
 
 
 
 export const StyledGameDetailsTitle = styled.h1`
-    color:white;
+    color:${props =>props.theme.colors.text};
 
 `
 
 export const StyledGameDetailsSubtitles = styled.h2`
-    color:white;
+    color:${props =>props.theme.colors.text};
 
 `
 export const StyledGameDetailsP = styled.p`
-    color:white;
+    color:${props =>props.theme.colors.text};
 
 `
 export const StyledGameDetailsReq = styled.div`
@@ -42,5 +42,5 @@ export const StyledGameDetailsDivCard= styled.div`
 
 `
 export const StyledGameDetailsH3 = styled.h3`
-    color:white;
+    color:${props =>props.theme.colors.text};
 `

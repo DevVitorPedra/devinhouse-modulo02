@@ -4,7 +4,7 @@ export const StyledCommentsCard = styled.div`
     width:100%;
     height:100%;
     border-radius:12px;
-    border:2px solid white;
+    border:2px solid ${props=>props.theme.colors.border};
     display: flex;
     flex-direction:column;
     align-items:flex-start;
@@ -35,13 +35,17 @@ export const StyledCommentsForm = styled.form`
 export const StyledCommentsBtn = styled.button`
     width:100px;
     height: 30px;
+    color:${props=>props.theme.colors.textHover};
     border-radius:10px;
-    box-shadow:0px 0px 12px  5px gray;
+    background-color:${props=>props.theme.colors.btns};
+    :hover{
+        box-shadow:0px 0px 12px  5px ${props=>props.theme.colors.shadows};
+    }
     `
 export const StyledCommentsInput = styled.input`
     width:200px auto;
     height:20px;
-    border: 0 0 2px 0 solid black;
+    
 `
 export const StyledCommentsTextarea = styled.textarea`
     max-width:400px;
@@ -51,7 +55,7 @@ export const StyledCommentsTextarea = styled.textarea`
     
 `
 export const StyledCommentsH1 = styled.h1`
-    color:white;
+    color:${props =>props.theme.colors.text};
     
 `
 export const StyledCommentsWarning = styled.p`

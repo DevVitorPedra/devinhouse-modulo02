@@ -14,11 +14,11 @@ export const StyledGamesCard = styled.div`
    display: -webkit-box;
    -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-    color:white;
+    color:black;
     :hover{
-        text-shadow: 0px 0px 8px  ${props =>props.theme.colors.purple};
-        color: ${props =>props.theme.colors.primary};
-        background-color:#101010;
+        text-shadow: 0px 0px 8px  ${props =>props.theme.colors.shadows};
+        color: ${props =>props.theme.colors.textHover};
+        background-color:${props =>props.theme.colors.backgroundHover};
 
     }
     a{
