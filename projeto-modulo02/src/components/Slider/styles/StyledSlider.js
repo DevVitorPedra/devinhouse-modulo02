@@ -15,20 +15,23 @@ export const StyledSliderCard = styled.div`
 
 `
 export  const StyledSliderImg = styled.img`
-    width:50%;
-    min-height:auto;
+    height:70%;
+    min-width:auto;
     border-radius:5px;
+    transform:scale(1);
+    transition: all 2s ease
 `
 export const StyledSliderlist = styled.div`
-    width:70%;
-    height:25%;
+    
+    height:35%;
     display:flex;
     justify-content:space-evenly;
 
 `
 export const StyledSliderListImg = styled.img`
     height:100%;
+    border-radius:50%;
     width:auto;
-
+   
 
 `

@@ -14,7 +14,7 @@ export default function Comments(props) {
         validationSchema: Yup.object({
             name: Yup.string().required('Nome é obrigatório'),
             email: Yup.string().email("Invalid email format").required("Email é obrigatório"),
-            comment: Yup.string().max(50, "max 50 Characters").required('Comentário é obrigatório')
+            comment: Yup.string().max(200, "max 200 Characters").required('Comentário é obrigatório')
         }),
         onSubmit: ({ name, email, comment }) => {
             props.saver(props.id, name, email, comment)

@@ -1,8 +1,7 @@
 import React from 'react'
-import { SideMenuBoard, SideMenuButtons } from './styles/StyledSideMenu'
+import { SideMenuBoard, SideMenuButtons, StyledMetalSlug } from './styles/StyledSideMenu'
 import { Link } from 'react-router-dom'
-import SearchBar from '../../SearchBar/SearchBar'
-
+import MetalSlug from '../../../assets/images/shooting-loading.gif'
 
 export default function SideMenu() {
     return (
@@ -10,7 +9,7 @@ export default function SideMenu() {
         <SideMenuBoard>
             <SideMenuButtons backgroundcolor="green"><Link to={'/gameslist'}>Jogos</Link></SideMenuButtons>
             <SideMenuButtons backgroundcolor="red"> <Link to={'/news'}>Notícias</Link></SideMenuButtons>
-
+            <StyledMetalSlug src={MetalSlug}/>
 
 
         </SideMenuBoard>
