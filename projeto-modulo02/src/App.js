@@ -6,6 +6,7 @@ import GlobalStyle from './components/GlobalStyle/global';
 import MainSection from './components/MainSection/MainSection';
 import {BrowserRouter as Router} from 'react-router-dom'
 import { SearchContext } from './components/SearchContext/SearchContext';
+import Footer from './components/Footer-Menu/Footer';
 
 function App() {
   const [currentTheme,setTheme] = useState(Light)
@@ -26,7 +27,8 @@ function App() {
         <MainSection/>
         </SearchContext.Provider>
         </Router>
-    </div>
+        <Footer/> 
+           </div>
     
     </ThemeProvider>
   );

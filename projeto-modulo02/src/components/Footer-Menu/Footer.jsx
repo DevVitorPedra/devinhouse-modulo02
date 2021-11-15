@@ -1,9 +1,10 @@
 import React from 'react'
+import { StyledFooterDiv,StyledBrandName } from './styles/StyledFooter'
 
 export default function Footer() {
     return (
-        <div className="footer-menu">
-
-        </div>
+      <StyledFooterDiv>
+          <StyledBrandName>VSP</StyledBrandName>
+      </StyledFooterDiv>
     )
-}
+    }
