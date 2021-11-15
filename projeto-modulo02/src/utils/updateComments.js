@@ -6,4 +6,3 @@ export default function updateComments(gameIdx,commentIdx,operation){
      
 }
 
-//gameid e comment idx não estão chegando, 

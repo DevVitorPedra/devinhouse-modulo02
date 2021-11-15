@@ -20,6 +20,7 @@ export const StyledCommentsInputsCard = styled.div`
 
 `
 export const StyledCommentsInfoCard = styled.div`
+color:${props =>props.theme.colors.text};
 display:flex;
 flex-direction:column;
 gap:10px;

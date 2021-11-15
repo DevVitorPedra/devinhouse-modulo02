@@ -2,12 +2,19 @@ import React, { useContext } from 'react'
 import { StyledGamesCard, StyledGamesDescription, StyledGamesImg, StyledGamesTitle } from '../../pages/GamesList/styles/StyledGamesList';
 import { Link } from 'react-router-dom';
 import { SearchContext } from '../SearchContext/SearchContext';
+import { StyledCommentsInfoCard } from '../Comments/styles/StyledComments';
 export default function GamesListRender(props) {
     const { value } = useContext(SearchContext)
     const filtered = props.info.filter((element) => {
         return element.title.toLowerCase().includes(value.toLowerCase())
     })
     return (
+        <>
+        <StyledCommentsInfoCard>
+        {(value==='')?<StyledGamesDescription>Todos os resultados ({filtered.length})</StyledGamesDescription>:
+        <StyledGamesDescription>Resultados para "{value}" ({filtered.length})</StyledGamesDescription>}
+        </StyledCommentsInfoCard>
+        {
         filtered.map((element) => {
             return (
                 <StyledGamesCard key={element.id}>
@@ -18,6 +25,7 @@ export default function GamesListRender(props) {
                     </Link>
                 </StyledGamesCard>
             )
-        })
+        })}
+        </>
     )
 }
