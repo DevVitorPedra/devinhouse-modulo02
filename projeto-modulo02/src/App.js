@@ -18,9 +18,10 @@ function App() {
     <div className="App">
      
       <GlobalStyle/>
+      <Router>
         <MainHeader current={currentTheme}  toggle = {toggleTheme}/>
         
-        <Router>
+      
            <SearchContext.Provider value ={{value,setValue}} >
         <MainSection/>
         </SearchContext.Provider>

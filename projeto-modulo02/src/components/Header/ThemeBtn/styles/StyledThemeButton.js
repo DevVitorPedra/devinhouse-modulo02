@@ -8,6 +8,7 @@ export const StyledThemeButton = styled.button`
     width:40px;
     height:40px;
     font-size:28px;
+    box-shadow:0px 0px 20px 5px ${props =>props.theme.colors.shadows};
     color:${props =>props.theme.colors.themeBtn};
     background-color:${props =>props.theme.colors.themeBG};
 `

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledDisplay = styled.div`
+export const StyledDisplay = styled.main`
 border-radius:12px;
     width:100%;
     display:flex;

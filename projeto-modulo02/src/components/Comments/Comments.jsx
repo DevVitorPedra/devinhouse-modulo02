@@ -5,6 +5,7 @@ import { StyledCommentsCard, StyledCommentsForm, StyledCommentsH1, StyledComment
 
 
 export default function Comments(props) {
+
     const { handleSubmit, handleChange, values, touched, errors, handleBlur } = useFormik({
         initialValues: {
             name: '',
@@ -18,6 +19,7 @@ export default function Comments(props) {
         }),
         onSubmit: ({ name, email, comment }) => {
             props.saver(props.id, name, email, comment)
+           
         }
     })
 

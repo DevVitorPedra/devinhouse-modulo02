@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SideMenuBoard = styled.div`
+export const SideMenuBoard = styled.aside`
 gap:10px;
 display:flex;
 border:2px solid ${props=>props.theme.colors.border};

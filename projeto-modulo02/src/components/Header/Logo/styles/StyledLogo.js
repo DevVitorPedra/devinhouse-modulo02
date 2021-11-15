@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import logobg from '../../../../assets/images/logo-bg.jpg'
-
+import logobg from '../../../../assets/images/EaH.gif'
 export const StyledLogo = styled.h1`
   width: 100%;
   height:70px;
@@ -8,7 +7,7 @@ export const StyledLogo = styled.h1`
   justify-content:center;
   align-items:center;
   font-size:60px;
-  animation:shadow-pulsate 1.5s infinite;
+  animation:shadow-pulsate 2.5s infinite ease-in;
   @keyframes shadow-pulsate {
     0%{
       text-shadow: 0px 0px 55px  ${props => props.theme.colors.shadows};

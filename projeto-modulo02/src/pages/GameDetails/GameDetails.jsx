@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react'
-
 import { useParams } from 'react-router-dom';
 import { StyledGameDetailsCard, StyledGameDetailsDivCard, StyledGameDetailsH3, StyledGameDetailsP, StyledGameDetailsReq, StyledGameDetailsSubtitles, StyledGameDetailsTitle } from './styles/StyledGameDetails';
 import { StyledNewsLoading } from '../News/styles/StyledNewsCard';
@@ -69,7 +68,7 @@ export default function GameDetails() {
                 </StyledGameDetailsReq>
             </StyledGameDetailsCard>
 
-            <Comments saver={commentSave} id={game.id} />
+            <Comments  saver={commentSave} id={game.id} />
 
             {(!comments) ? <StyledGameDetailsH3>Nenhum comentário ainda...</StyledGameDetailsH3> : comments.map((element, idx) => { return (<ShowComments gameId={match.id} id={idx} key={idx + 1} name={element.name} comment={element.comment} likes={element.likes} />) })}
 

@@ -14,7 +14,7 @@ export default function GamesList() {
     console.log(games)
     return (
         (!games) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <StyledCommentsH1>Loading...</StyledCommentsH1>
+            <StyledCommentsH1>Carregando...</StyledCommentsH1>
             <StyledNewsLoading />
         </div> : (
             <>

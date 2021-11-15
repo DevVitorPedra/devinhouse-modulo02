@@ -22,7 +22,7 @@ export default function News() {
     return (
 
         (!news) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <StyledCommentsH1>Loading...</StyledCommentsH1> <StyledNewsLoading /></div> : (
+            <StyledCommentsH1>Carregando...</StyledCommentsH1> <StyledNewsLoading /></div> : (
             <>
                 <StyledCommentsInfoCard> 
                     <SearchBar search='' />
