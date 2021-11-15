@@ -7,11 +7,9 @@ export default function SideMenu() {
     return (
 
         <SideMenuBoard>
-            <SideMenuButtons backgroundcolor="green"><Link to={'/gameslist'}>Jogos</Link></SideMenuButtons>
-            <SideMenuButtons backgroundcolor="red"> <Link to={'/news'}>Notícias</Link></SideMenuButtons>
-            <StyledMetalSlug src={MetalSlug}/>
-
-
+          <Link className="side-menu-btn" to={'/gameslist'}>  <SideMenuButtons backgroundcolor="green">Jogos</SideMenuButtons></Link>
+          <Link className="side-menu-btn" to={'/news'}> <SideMenuButtons backgroundcolor="red"> Notícias</SideMenuButtons></Link>
+        <StyledMetalSlug src={MetalSlug}/>
         </SideMenuBoard>
 
     )

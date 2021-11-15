@@ -10,3 +10,56 @@ Single-Game-Page: página com um Hero superior, automático e com as imagens men
 descrição e requisítos, formulário de comentário, e comentários já existentes ou placeholder, "nenhum comentário, seja o priemiro",
 
 }
+quesitos de avaliação com pontuação máxima:
+1-O aluno desenvolveu a página de listagem de jogos conforme o mockup da aplicação e usou
+ corretamente a rota para acesso à ela.
+--A página de jogos esta corretamente listada, tendo acesso pela rota "gameslist" atráves do botão "jogos" no "aside-menu" do lado esquerdo.
+
+2-O aluno desenvolveu o componente de card e listou os cards corretamente.
+--Os cards estão corretamente criados e posicionados dinâmicamente.
+
+3-O aluno desenvolveu a página de listagem de notícias conforme o mockup da aplicação e usou
+ corretamente a rota para acesso à ela.
+--A página de notícias esta corretamente desenvolvida e a rota pode ser acessada
+pelo botão "notícias" no "aside-menu" esquerdo
+
+4-O aluno desenvolveu o componente de card conforme mockup e listou os cards corretamente.
+--Os cards foram criados corretamente seguindo o mockup.
+
+5-O aluno desenvolveu a página de detalhes do jogo, com slideshow e conforme o mockup da aplicação,
+ e usou corretamente a rota para acesso à ela.
+ --A página foi desenvolvida seguindo o mockup, e com estilizações a mais, e a rota de acesso é a "gamedetails/:id"
+ clicando no card do jogo.
+
+ 6-O aluno criou o formulário e os comentários no localStorage corretamente,
+  além de criar um sistema de up vote e down votes conforme mockup
+  --Os comentários estão sendo salvos no localstorage, e pra cada comentário o sistema de votos foi implementado
+
+  7-O aluno criou componentes e organizou o projeto, além de aplicar hooks avançados do React
+   (useContext e useReducer)
+   --Projeto organizado por componentes, páginas e funções separadas, já foi utilizado useContext,
+   faltando apenas useReducer
+
+   8-O aluno criou os estilos CSS com o styled components,
+    e implementou um tema global com mais de um esquema de cores
+    --Todos os componentes estilizados com Styled Components, temas Light e Dark criados,
+    tendo acesso através do botão ao lado título da página.
+9-Além de usar corretamente cada um dos endpoints, o aluno separou os arquivos 
+com os serviços de busca dos arquivos de componente, mantendo a separação da responsabilidade
+ de busca separada da responsabilidade de criação de interface.
+--Todos os componentes de renderizações estão separados das funções de tratamento de dados, que estão na pasta utils com outras funções 
+
+plano de projeto:
+[x] html sêmantico
+[x] css styled components
+[x] métodos JS
+[x] axios
+[x] React:estados, efeitos, componentização,validação com  Formik e  Yup
+
+
+
+
+
+
+
+
