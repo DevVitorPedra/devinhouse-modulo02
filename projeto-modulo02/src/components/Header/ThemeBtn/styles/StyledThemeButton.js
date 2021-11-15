@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const StyledThemeButton = styled.button`
     position:absolute;
-    top:20px;
+    top:60px;
     right:20px;
     border-radius:10px;
-    width:30px;
-    height:30px;
-    font-size:18px;
+    width:40px;
+    height:40px;
+    font-size:28px;
     color:${props =>props.theme.colors.themeBtn};
     background-color:${props =>props.theme.colors.themeBG};
 `

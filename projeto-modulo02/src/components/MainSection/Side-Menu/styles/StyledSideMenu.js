@@ -36,5 +36,6 @@ background-color:${props=>props.theme.colors.btns};
 `
 export const StyledMetalSlug = styled.img`
     width:100%;
+    min-width:150px;
     
 `

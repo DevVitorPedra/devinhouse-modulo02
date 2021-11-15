@@ -24,7 +24,9 @@ export default function News() {
         (!news) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <StyledCommentsH1>Loading...</StyledCommentsH1> <StyledNewsLoading /></div> : (
             <>
-                <StyledCommentsInfoCard> <SearchBar search='' /></StyledCommentsInfoCard>
+                <StyledCommentsInfoCard> 
+                    <SearchBar search='' />
+                    </StyledCommentsInfoCard>
                 <NewsRender info={news} />
             </>
 
