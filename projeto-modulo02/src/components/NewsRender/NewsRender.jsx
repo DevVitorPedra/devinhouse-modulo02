@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { SearchContext } from '../SearchContext/SearchContext'
-import { StyledCommentsInfoCard } from '../Comments/styles/StyledComments'
 import { StyledLink, StyledNewsCard, StyledNewsDescription, StyledNewsTitle, StyledNewsImg } from './styles/StyledNewsRender'
+import { SharedBar } from '../SharedComponents/styles/StyledSharedComponents'
 export default function NewsRender(props) {
 
     const { value } = useContext(SearchContext)
@@ -12,14 +12,14 @@ export default function NewsRender(props) {
 
     return (
         <>
-         <StyledCommentsInfoCard>
+         <SharedBar>
         {(value==='')?<StyledNewsDescription>Todos os resultados ({filtered.length})</StyledNewsDescription>:
         <StyledNewsDescription>Resultados para "{value}" ({filtered.length})</StyledNewsDescription>}
-        </StyledCommentsInfoCard>
+        </SharedBar>
         {filtered.map((element, idx) => {
 
             return (
-                <StyledLink key={idx + 1} href={element.article_url} target="_blank">
+                <StyledLink key={idx + 1} href={element.article_url} target="_blank" rel="noreferrer">
                     <StyledNewsCard >
                         <StyledNewsImg src={element.thumbnail} />
                         <div>

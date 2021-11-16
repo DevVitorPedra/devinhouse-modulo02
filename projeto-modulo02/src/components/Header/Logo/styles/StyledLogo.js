@@ -6,22 +6,8 @@ export const StyledLogo = styled.h1`
   display:flex;
   justify-content:center;
   align-items:center;
-  font-size:60px;
-  animation:shadow-pulsate 2.5s infinite ease-in;
-  @keyframes shadow-pulsate {
-    0%{
-      text-shadow: 0px 0px 55px  ${props => props.theme.colors.shadows};
-     
-    }
-    50%{
-      text-shadow: 0px 0px 10px  ${props => props.theme.colors.shadows};
-      color:black
-    }
-    100%{
-      text-shadow: 0px 0px 55px  ${props => props.theme.colors.shadows};
-     
-    }
-  }
+  font-size:8vw;
+
 `
 export const Logo = styled.div`
 color:${props => props.theme.colors.textHover};

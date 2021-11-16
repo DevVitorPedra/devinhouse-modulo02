@@ -13,7 +13,6 @@ export default async function getDetails(id,setGameDetails){
     };
 
     await axios.request(options).then(function (response) {
-        console.log(response.data);
         setGameDetails(response.data)
     }).catch(function (error) {
         console.error(error);

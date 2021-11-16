@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 export const StyledNewsCard = styled.div`
+transition:all 1s ease-out;
 display:flex;
 flex-direction:row;
 justify-content:flex-start;

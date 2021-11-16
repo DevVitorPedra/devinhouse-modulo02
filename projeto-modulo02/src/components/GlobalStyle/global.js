@@ -11,12 +11,13 @@ export default createGlobalStyle`
     margin:0;
     padding:2px;
     box-Sizing:border-box;
-
+    
 
 }
 body{
     font-family:'MontSerrat';
     background-color:${props=>props.theme.colors.background};
+    transition:all 2s ease-out;
 }
 .side-menu-btn{
     width:90%;
@@ -33,5 +34,20 @@ body{
 .logo-link{
     text-decoration:none;
     color:white;
+    animation:shadow-pulsate 2.5s infinite ease-in;
+  @keyframes shadow-pulsate {
+    0%{
+      text-shadow: 0px 0px 55px  ${props => props.theme.colors.shadows};
+     
+    }
+    50%{
+      text-shadow: 0px 0px 10px  ${props => props.theme.colors.shadows};
+      color:black
+    }
+    100%{
+      text-shadow: 0px 0px 55px  ${props => props.theme.colors.shadows};
+     
+    }
+  }
 }
 `

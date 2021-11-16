@@ -8,7 +8,6 @@ export default function CommentsVotes(props) {
 
 
     const handleUpVote = () => {
-
         setLikes(likes + 1)
         updateComments(gameId, id, likes + 1)
     }
