@@ -11,7 +11,6 @@ import axios from "axios";
       };
       
      await axios.request(options).then(function (response) {
-      console.log(response.data);
       setGamesList(response.data)
   }).catch(function (error) {
       console.error(error);
