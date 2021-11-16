@@ -1,11 +1,9 @@
 import React from 'react'
-import { StyledLoading } from '../../components/SharedComponents/styles/StyledSharedComponents'
+import { SharedH1,SharedBar, StyledLoading } from '../../components/SharedComponents/styles/StyledSharedComponents'
 import { useState, useEffect } from 'react';
 import fetchingNews from '../../utils/newsFetcher'
 import SearchBar from '../../components/SearchBar/SearchBar';
 import NewsRender from '../../components/NewsRender/NewsRender';
-import { StyledCommentsH1, StyledCommentsInfoCard } from '../../components/Comments/styles/StyledComments';
-
 
 export default function News() {
 
@@ -21,11 +19,11 @@ export default function News() {
     return (
 
         (!news) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <StyledCommentsH1>Carregando...</StyledCommentsH1> <StyledLoading /></div> : (
+            <SharedH1>Carregando...</SharedH1> <StyledLoading /></div> : (
             <>
-                <StyledCommentsInfoCard> 
+                <SharedBar> 
                     <SearchBar search='' />
-                    </StyledCommentsInfoCard>
+                    </SharedBar>
                 <NewsRender info={news} />
             </>
 
