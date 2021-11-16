@@ -6,7 +6,7 @@ export default function Intro() {
     return (
         <div>
             <SharedH1>Bem Vindo</SharedH1>
-            <SharedP>Jogos E notícias do mundo gamer em um só lugar!!</SharedP>
+            <SharedP>Jogos e notícias do mundo gamer em um só lugar!!</SharedP>
         </div>
     )
 }

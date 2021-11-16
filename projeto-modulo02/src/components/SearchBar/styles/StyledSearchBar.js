@@ -11,5 +11,8 @@ transition:all 2s ease-out;
     border:none;
     border-bottom:1px solid ${props=>props.theme.colors.text};
     background-color:${props=>props.theme.colors.background};
-    
+    &:focus{
+        outline:none;
+        border-bottom:1px solid ${props=>props.theme.colors.text};
+    }
 `
