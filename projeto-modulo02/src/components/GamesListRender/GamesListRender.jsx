@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { StyledGamesCard, StyledGamesDescription, StyledGamesImg, StyledGamesTitle } from './styles/StyledGamesList';
 import { Link } from 'react-router-dom';
-import { SearchContext } from '../SearchContext/SearchContext';
+import { SearchContext } from '../Contexts/SearchContext';
 import { SharedBar } from '../SharedComponents/styles/StyledSharedComponents';
 export default function GamesListRender(props) {
     const { value } = useContext(SearchContext)

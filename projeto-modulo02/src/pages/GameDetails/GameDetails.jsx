@@ -8,14 +8,14 @@ import commentSave from '../../utils/commentSaver';
 import ShowComments from '../../components/ShowComments/ShowComments';
 import commentLoader from '../../utils/commentLoader';
 import getDetails from '../../utils/detailsFetcher';
-import { SearchContext } from '../../components/SearchContext/SearchContext';
+import { SearchContext } from '../../components/Contexts/SearchContext';
+import { CommentsContext } from '../../components/Contexts/CommentsContext';
 
 
 export default function GameDetails() {
     const { value, setValue } = useContext(SearchContext)
     const match = useParams()
-    const [comments, setComments] = useState()
-    
+    const {comments, setComments} = useContext(CommentsContext)
     const [game, setGame] = useState();
     
     useEffect(() => {

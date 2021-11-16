@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { StyledSearch } from './styles/StyledSearchBar'
-import { SearchContext } from '../SearchContext/SearchContext'
+import { SearchContext } from '../Contexts/SearchContext'
 
 
 

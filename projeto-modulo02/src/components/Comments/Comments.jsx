@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useFormik } from 'formik';
 import * as Yup from "yup";
 import { StyledCommentsCard, StyledCommentsForm, StyledCommentsH1, StyledCommentsInfoCard, StyledCommentsInput, StyledCommentsInputsCard, StyledCommentsTextarea, StyledCommentsBtn, StyledCommentsWarning } from './styles/StyledComments';
+import { CommentsContext } from '../Contexts/CommentsContext';
+import commentLoader from '../../utils/commentLoader';
 
 
 export default function Comments(props) {
+    const {comments, setComments} = useContext(CommentsContext)
 
     const { handleSubmit, handleChange, values, touched, errors, handleBlur } = useFormik({
         initialValues: {
@@ -19,7 +22,7 @@ export default function Comments(props) {
         }),
         onSubmit: ({ name, email, comment }) => {
             props.saver(props.id, name, email, comment)
-           
+           setComments(commentLoader(props.id))
         }
     })
 

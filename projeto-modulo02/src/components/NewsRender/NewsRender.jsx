@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { SearchContext } from '../SearchContext/SearchContext'
+import { SearchContext } from '../Contexts/SearchContext'
 import { StyledLink, StyledNewsCard, StyledNewsDescription, StyledNewsTitle, StyledNewsImg } from './styles/StyledNewsRender'
 import { SharedBar } from '../SharedComponents/styles/StyledSharedComponents'
 export default function NewsRender(props) {
