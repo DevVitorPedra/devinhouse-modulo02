@@ -15,7 +15,7 @@ export default function News() {
     }, []);
 
 
-    console.log(news)
+   
     return (
 
         (!news) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

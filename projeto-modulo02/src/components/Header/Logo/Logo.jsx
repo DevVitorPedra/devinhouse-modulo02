@@ -1,6 +1,5 @@
 import React from 'react'
-import ThemeButton from '../ThemeBtn/ThemeButton'
-import { Logo, StyledLogo, StyledLogoImg } from './styles/StyledLogo'
+import { Logo, StyledLogo } from './styles/StyledLogo'
 import { Link } from 'react-router-dom'
 
 

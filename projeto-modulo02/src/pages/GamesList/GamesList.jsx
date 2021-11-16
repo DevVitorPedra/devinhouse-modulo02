@@ -12,7 +12,7 @@ export default function GamesList() {
     }, []);
 
 
-    console.log(games)
+    
     return (
         (!games) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <SharedH1>Carregando...</SharedH1>

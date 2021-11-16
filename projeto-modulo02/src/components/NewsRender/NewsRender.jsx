@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { SearchContext } from '../SearchContext/SearchContext'
-import { StyledCommentsInfoCard } from '../Comments/styles/StyledComments'
 import { StyledLink, StyledNewsCard, StyledNewsDescription, StyledNewsTitle, StyledNewsImg } from './styles/StyledNewsRender'
 import { SharedBar } from '../SharedComponents/styles/StyledSharedComponents'
 export default function NewsRender(props) {
@@ -20,7 +19,7 @@ export default function NewsRender(props) {
         {filtered.map((element, idx) => {
 
             return (
-                <StyledLink key={idx + 1} href={element.article_url} target="_blank">
+                <StyledLink key={idx + 1} href={element.article_url} target="_blank" rel="noreferrer">
                     <StyledNewsCard >
                         <StyledNewsImg src={element.thumbnail} />
                         <div>

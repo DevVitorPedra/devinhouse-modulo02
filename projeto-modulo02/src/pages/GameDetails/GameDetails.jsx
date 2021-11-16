@@ -17,7 +17,7 @@ export default function GameDetails() {
     const [comments, setComments] = useState()
     
     const [game, setGame] = useState();
-    console.log(game)
+    
     useEffect(() => {
         getDetails(match.id, setGame)
         setComments(commentLoader(match.id))
@@ -82,8 +82,3 @@ export default function GameDetails() {
 
     )
 }
-/** /TODO criar a pagina de detalhes,hero
- *  <StyledGameDetailsCard>
-            <StyledGamedetailsImg src=/>
-        </StyledGameDetailsCard>
- */
