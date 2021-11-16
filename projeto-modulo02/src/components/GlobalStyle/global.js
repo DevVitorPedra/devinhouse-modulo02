@@ -11,12 +11,13 @@ export default createGlobalStyle`
     margin:0;
     padding:2px;
     box-Sizing:border-box;
-
+    
 
 }
 body{
     font-family:'MontSerrat';
     background-color:${props=>props.theme.colors.background};
+    transition:all 2s ease-out;
 }
 .side-menu-btn{
     width:90%;

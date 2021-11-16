@@ -1,6 +1,5 @@
 import React from 'react'
-import { StyledNewsLoading } from './styles/StyledNewsCard'
-
+import { StyledLoading } from '../../components/SharedComponents/styles/StyledSharedComponents'
 import { useState, useEffect } from 'react';
 import fetchingNews from '../../utils/newsFetcher'
 import SearchBar from '../../components/SearchBar/SearchBar';
@@ -22,7 +21,7 @@ export default function News() {
     return (
 
         (!news) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <StyledCommentsH1>Carregando...</StyledCommentsH1> <StyledNewsLoading /></div> : (
+            <StyledCommentsH1>Carregando...</StyledCommentsH1> <StyledLoading /></div> : (
             <>
                 <StyledCommentsInfoCard> 
                     <SearchBar search='' />

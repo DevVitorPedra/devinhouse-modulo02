@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyledNewsLoading } from '../News/styles/StyledNewsCard';
+import { StyledLoading } from '../../components/SharedComponents/styles/StyledSharedComponents';
 import fetchingGames from '../../utils/gamesListFetcher';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import GamesListRender from '../../components/GamesListRender/GamesListRender';
@@ -15,7 +15,7 @@ export default function GamesList() {
     return (
         (!games) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <StyledCommentsH1>Carregando...</StyledCommentsH1>
-            <StyledNewsLoading />
+            <StyledLoading />
         </div> : (
             <>
                 <StyledCommentsInfoCard> <SearchBar search='' /></StyledCommentsInfoCard>

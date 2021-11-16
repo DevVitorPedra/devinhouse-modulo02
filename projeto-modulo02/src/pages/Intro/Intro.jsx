@@ -1,10 +1,12 @@
 import React from 'react'
-import { StyledNewsLoading } from '../News/styles/StyledNewsCard'
+import { SharedH1, SharedP } from '../../components/SharedComponents/styles/StyledSharedComponents'
+
 
 export default function Intro() {
     return (
         <div>
-            <StyledNewsLoading />
+            <SharedH1>Bem Vindo</SharedH1>
+            <SharedP>Jogos E notícias do mundo gamer em um só lugar!!</SharedP>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import { StyledGameDetailsCard, StyledGameDetailsDivCard, StyledGameDetailsH3, StyledGameDetailsP, StyledGameDetailsReq, StyledGameDetailsSubtitles, StyledGameDetailsTitle } from './styles/StyledGameDetails';
-import { StyledNewsLoading } from '../News/styles/StyledNewsCard';
+import { StyledLoading } from '../../components/SharedComponents/styles/StyledSharedComponents';
 import Slider from '../../components/Slider/Slider';
 import Comments from '../../components/Comments/Comments';
 import commentSave from '../../utils/commentSaver';
@@ -28,7 +28,7 @@ export default function GameDetails() {
 
     return (
 
-        (!game) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> <StyledNewsLoading /></div> : (<>
+        (!game) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> <StyledLoading /></div> : (<>
             <StyledGameDetailsTitle>{game.title} </StyledGameDetailsTitle>
             <StyledGameDetailsP>({game.release_date})</StyledGameDetailsP>
             <Slider screenshots={game.screenshots} />

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SideMenuBoard = styled.aside`
+transition:all 2s ease-out;
 gap:10px;
 display:flex;
 border:2px solid ${props=>props.theme.colors.border};

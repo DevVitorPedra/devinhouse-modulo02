@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledDisplay = styled.main`
 border-radius:12px;
+transition:all 2s ease-out;
     width:100%;
     display:flex;
     flex-direction:row;

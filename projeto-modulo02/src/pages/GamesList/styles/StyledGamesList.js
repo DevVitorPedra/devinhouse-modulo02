@@ -4,6 +4,7 @@ export const StyledGamesCard = styled.div`
     border:2px solid  ${props =>props.theme.colors.border};;
     width:24%;
     color:${props =>props.theme.colors.text};
+    transition:all 0.7s ease-out;
     height:100%;
     border-radius:12px;
     display:flex;
@@ -47,7 +48,7 @@ margin-top:15px;
     overflow: hidden;
    text-overflow: ellipsis;
    display: -webkit-box;
-   -webkit-line-clamp: 8; /* number of lines to show */
+   -webkit-line-clamp: 8; // number of lines to show 
    -webkit-box-orient: vertical;
   
 
