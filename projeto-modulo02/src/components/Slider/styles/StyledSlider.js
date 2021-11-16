@@ -55,8 +55,8 @@ export const StyledSliderlist = styled.div`
 `
 export const StyledSliderListImg = styled.img`
     height:100%;
-    width:15%;
-    border-radius:50%;
+    width:25%;
+    border-radius:10%;
    
    
 

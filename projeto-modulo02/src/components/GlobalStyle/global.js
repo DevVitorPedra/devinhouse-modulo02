@@ -33,5 +33,20 @@ body{
 .logo-link{
     text-decoration:none;
     color:white;
+    animation:shadow-pulsate 2.5s infinite ease-in;
+  @keyframes shadow-pulsate {
+    0%{
+      text-shadow: 0px 0px 55px  ${props => props.theme.colors.shadows};
+     
+    }
+    50%{
+      text-shadow: 0px 0px 10px  ${props => props.theme.colors.shadows};
+      color:black
+    }
+    100%{
+      text-shadow: 0px 0px 55px  ${props => props.theme.colors.shadows};
+     
+    }
+  }
 }
 `
