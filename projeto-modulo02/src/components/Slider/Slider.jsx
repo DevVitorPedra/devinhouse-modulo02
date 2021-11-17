@@ -8,7 +8,7 @@ export default function Slider(props) {
     useEffect(() => {
         setSlider(images[0].image)
         
-    }, []);
+    }, [images]);
     const handleClick = (event) => {
       
         setSlider(event.target.src)
