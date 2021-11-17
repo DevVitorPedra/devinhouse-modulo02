@@ -1,18 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState,useReducer } from 'react'
 import updateComments from '../../utils/updateComments'
 import { StyledDownVote, StyledUpVote, StyledVotesCard } from './styles/StyledVotes'
 import { StyledShowCommentP } from '../ShowComments/styles/StyledShowComments'
+
+const commentReducer = (state, action,) =>{
+    console.log('reducer')
+        switch (action) {
+            case 'UP':
+                  return state+=1
+            case 'DOWN':
+                return state-=1
+
+            default:
+                return state
+        }
+}
 export default function CommentsVotes(props) {
     const { gameId, id, } = props
-    const [likes, setLikes] = useState(props.likes)
-
+    const [likes, dispatch] = useReducer(commentReducer, props.likes)
 
     const handleUpVote = () => {
-        setLikes(likes + 1)
+        dispatch("UP")
         updateComments(gameId, id, likes + 1)
     }
     const handleDownVote = () => {
-        setLikes(likes - 1)
+        dispatch("DOWN")
         updateComments(gameId, id, likes - 1)
     }
 
