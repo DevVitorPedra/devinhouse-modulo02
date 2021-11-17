@@ -8,7 +8,6 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { SearchContext } from './components/Contexts/SearchContext';
 import { CommentsContext } from './components/Contexts/CommentsContext';
 import Footer from './components/Footer-Menu/Footer';
-import Comments from './components/Comments/Comments';
 
 function App() {
   const [comments,setComments] = useState([])

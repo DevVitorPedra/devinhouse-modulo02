@@ -1,4 +1,4 @@
-import React, { useState,useReducer } from 'react'
+import React, { useReducer } from 'react'
 import updateComments from '../../utils/updateComments'
 import { StyledDownVote, StyledUpVote, StyledVotesCard } from './styles/StyledVotes'
 import { StyledShowCommentP } from '../ShowComments/styles/StyledShowComments'
