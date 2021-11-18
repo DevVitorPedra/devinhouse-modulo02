@@ -1,5 +1,6 @@
 # {VSP}
-#  <a href="https://vsp-devinmmo.netlify.app/" target="_blank" rel="noreferrer">DEVinMMO</a>
+# :point_right: <a href="https://vsp-devinmmo.netlify.app/" target="_blank" rel="noreferrer">>DEVinMMO<</a>  :point_left:
+
 ## MMO games list and games news site
 
 
