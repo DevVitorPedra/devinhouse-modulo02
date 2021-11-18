@@ -52,6 +52,8 @@ export default function GameDetails() {
                 <StyledGameDetailsReq>
                     <StyledGameDetailsSubtitles>Requisitos minimos</StyledGameDetailsSubtitles>
                     <br />
+                    {(game.minimum_system_requirements)?(
+                        <>
                     <StyledGameDetailsDivCard>
                         <span><StyledGameDetailsH3>Sistema</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.os}</StyledGameDetailsP> </span>
                         <br />
@@ -60,11 +62,10 @@ export default function GameDetails() {
                         <span><StyledGameDetailsH3>Memória</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.memory}</StyledGameDetailsP> </span>
                     </StyledGameDetailsDivCard>
                     <StyledGameDetailsDivCard>
-
                         <span><StyledGameDetailsH3>Gráficos</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.graphics}</StyledGameDetailsP> </span>
                         <br />
                         <span><StyledGameDetailsH3>Espaço HD</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.storage}</StyledGameDetailsP> </span>
-                    </StyledGameDetailsDivCard>
+                    </StyledGameDetailsDivCard></>):console.log('erro')}
                 </StyledGameDetailsReq>
             </StyledGameDetailsCard>
 
