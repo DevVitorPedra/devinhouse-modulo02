@@ -3,9 +3,6 @@
 
 ## MMO games list and games news site
 
-
-
-
 <img src="./src/assets/images/Captura de Tela (92).png" alt="Imagem lista de notícias">
 <img src="./src/assets/images/Captura de Tela (93).png" alt="Imagem lista de jogos">
 <img src="./src/assets/images/Captura de Tela (94).png" alt="Imagem lista jogos tema dark">
