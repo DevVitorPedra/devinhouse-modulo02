@@ -1,6 +1,6 @@
 # {VSP}
 # DEVinMMO
-## MY personal MMO Game List site
+## My personal MMO Game List site
 
 
 
@@ -10,9 +10,9 @@
 
 > DEVinMMO é uma aplicação para consulta de jogos MMO e notícias do mundo gamer
 
-### Ajustes e melhorias
+### Requisitos de avaliação
 
-O projeto foi finalizado
+O projeto foi finalizado, adequando os requisitos:
 
 
 - [x] Lista de Jogos e rota de acesso
