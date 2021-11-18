@@ -1,8 +1,8 @@
 # {VSP}
-# DEVinMMO
+#  <a href="https://vsp-devinmmo.netlify.app/" target="_blank" rel="noreferrer">DEVinMMO</a>
 ## MMO games list and games news site
 
-### <a href="https://vsp-devinmmo.netlify.app/" target="_blank" rel="noreferrer">Netlify</a>
+
 
 
 <img src="./src/assets/images/Captura de Tela (92).png" alt="Imagem lista de notícias">
