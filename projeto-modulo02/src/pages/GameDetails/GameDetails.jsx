@@ -65,7 +65,7 @@ export default function GameDetails() {
                         <span><StyledGameDetailsH3>Gráficos</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.graphics}</StyledGameDetailsP> </span>
                         <br />
                         <span><StyledGameDetailsH3>Espaço HD</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.storage}</StyledGameDetailsP> </span>
-                    </StyledGameDetailsDivCard></>):console.log('erro')}
+                    </StyledGameDetailsDivCard></>):<><StyledGameDetailsH3>Nenhum Requisito Mínimo</StyledGameDetailsH3></>}
                 </StyledGameDetailsReq>
             </StyledGameDetailsCard>
 
