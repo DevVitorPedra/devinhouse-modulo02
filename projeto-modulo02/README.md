@@ -1,6 +1,6 @@
 # {VSP}
 # DEVinMMO
-## My personal MMO Game List site
+## MMO games list and games news site
 
 
 
