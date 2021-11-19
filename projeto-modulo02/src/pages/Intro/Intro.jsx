@@ -4,9 +4,11 @@ import { SharedH1, SharedP } from '../../components/SharedComponents/styles/Styl
 
 export default function Intro() {
     return (
+
         <div>
             <SharedH1>Bem Vindo</SharedH1>
-            <SharedP>Jogos e notícias do mundo gamer em um só lugar!!</SharedP>
+            <SharedP>Jogos e notícias do mundo dos games em um só lugar!!</SharedP>
         </div>
+        
     )
 }

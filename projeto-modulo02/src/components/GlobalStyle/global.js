@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import montSerrat from '../../assets/fonts/Montserrat-Medium.ttf'
+import logobg from '../../assets/images/EaH.gif'
 export default createGlobalStyle`
 
 @font-face {
@@ -16,13 +17,21 @@ export default createGlobalStyle`
 }
 body{
     font-family:'MontSerrat';
+    background-image:url(${logobg});
+    background-size:cover;
     background-color:${props=>props.theme.colors.background};
-    transition:all 2s ease-out;
+    transition:all 1.5s ease-out;
+   
 }
 .side-menu-btn{
-    width:90%;
+    width:100%;
+    color:white;
+    text-decoration:none;
     display:flex;
+    opacity:1.5;
+ 
     justify-content:center;
+   
 }
 .slider-img{
     height:70%;
@@ -33,6 +42,7 @@ body{
 }
 .logo-link{
     text-decoration:none;
+    opacity:1;
     color:white;
     animation:shadow-pulsate 2.5s infinite ease-in;
   @keyframes shadow-pulsate {
@@ -49,5 +59,6 @@ body{
      
     }
   }
+  
 }
 `
