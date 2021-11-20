@@ -13,13 +13,11 @@ transition:all 1.5s ease-out;
     overflow-y:scroll;
     gap:8px;
     opacity:0.6;
-    
     height:65vh;
     background-color:${props=>props.theme.colors.background};
     box-shadow:0px 0px 10px 5px ${props=>props.theme.colors.shadows};
-    
     margin-top:10px;
-    scrollbar-width:2px;
+    
     :hover{
         opacity:1;
         transition:all 1s;
