@@ -7,7 +7,7 @@ import commentLoader from '../../utils/commentLoader';
 
 
 export default function Comments(props) {
-    const {comments, setComments} = useContext(CommentsContext)
+    const { comments, setComments } = useContext(CommentsContext)
 
     const { handleSubmit, handleChange, values, touched, errors, handleBlur } = useFormik({
         initialValues: {
@@ -22,7 +22,7 @@ export default function Comments(props) {
         }),
         onSubmit: ({ name, email, comment }) => {
             props.saver(props.id, name, email, comment)
-           setComments(commentLoader(props.id))
+            setComments(commentLoader(props.id))
         }
     })
 
@@ -34,14 +34,9 @@ export default function Comments(props) {
                 <StyledCommentsInputsCard >
                     <StyledCommentsInfoCard>
                         <StyledCommentsInput onBlur={handleBlur} onChange={handleChange} value={values.name} name="name" placeholder="Nome" type="text" />
-
                         <StyledCommentsInput onBlur={handleBlur} onChange={handleChange} value={values.email} name="email" placeholder="Email" type="text" />
-
-                    </StyledCommentsInfoCard>
-                    <StyledCommentsInfoCard>
                         <StyledCommentsTextarea onBlur={handleBlur} onChange={handleChange} value={values.comment} name="comment" placeholder="Escreva seu comentário..." type="text" />
                     </StyledCommentsInfoCard>
-
 
                 </StyledCommentsInputsCard>
                 <StyledCommentsInfoCard>

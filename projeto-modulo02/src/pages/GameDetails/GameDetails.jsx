@@ -15,9 +15,9 @@ import { CommentsContext } from '../../components/Contexts/CommentsContext';
 export default function GameDetails() {
     const { value, setValue } = useContext(SearchContext)
     const match = useParams()
-    const {comments, setComments} = useContext(CommentsContext)
+    const { comments, setComments } = useContext(CommentsContext)
     const [game, setGame] = useState();
-    
+
     useEffect(() => {
         getDetails(match.id, setGame)
         setComments(commentLoader(match.id))
@@ -34,10 +34,8 @@ export default function GameDetails() {
             <Slider screenshots={game.screenshots} />
             <StyledGameDetailsCard>
                 <StyledGameDetailsP>{game.short_description}</StyledGameDetailsP>
-                
             </StyledGameDetailsCard>
             <StyledGameDetailsCard>
-                
                 <StyledGameDetailsDivCard>
                     <div>
                         <StyledGameDetailsSubtitles>Gênero</StyledGameDetailsSubtitles>
@@ -47,39 +45,29 @@ export default function GameDetails() {
                         <StyledGameDetailsSubtitles>Plataforma</StyledGameDetailsSubtitles>
                         <StyledGameDetailsP>{game.platform}</StyledGameDetailsP>
                     </div>
-
                 </StyledGameDetailsDivCard>
                 <StyledGameDetailsReq>
                     <StyledGameDetailsSubtitles>Requisitos minimos</StyledGameDetailsSubtitles>
                     <br />
-                    {(game.minimum_system_requirements)?(
+                    {(game.minimum_system_requirements) ? (
                         <>
-                    <StyledGameDetailsDivCard>
-                        <span><StyledGameDetailsH3>Sistema</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.os}</StyledGameDetailsP> </span>
-                        <br />
-                        <span><StyledGameDetailsH3>Processador</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.processor}</StyledGameDetailsP> </span>
-                        <br />
-                        <span><StyledGameDetailsH3>Memória</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.memory}</StyledGameDetailsP> </span>
-                    </StyledGameDetailsDivCard>
-                    <StyledGameDetailsDivCard>
-                        <span><StyledGameDetailsH3>Gráficos</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.graphics}</StyledGameDetailsP> </span>
-                        <br />
-                        <span><StyledGameDetailsH3>Espaço HD</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.storage}</StyledGameDetailsP> </span>
-                    </StyledGameDetailsDivCard></>):<><StyledGameDetailsH3>Nenhum Requisito Mínimo</StyledGameDetailsH3></>}
+                            <StyledGameDetailsDivCard>
+                                <span><StyledGameDetailsH3>Sistema</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.os}</StyledGameDetailsP> </span>
+                                <br />
+                                <span><StyledGameDetailsH3>Processador</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.processor}</StyledGameDetailsP> </span>
+                                <br />
+                                <span><StyledGameDetailsH3>Memória</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.memory}</StyledGameDetailsP> </span>
+                            </StyledGameDetailsDivCard>
+                            <StyledGameDetailsDivCard>
+                                <span><StyledGameDetailsH3>Gráficos</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.graphics}</StyledGameDetailsP> </span>
+                                <br />
+                                <span><StyledGameDetailsH3>Espaço HD</StyledGameDetailsH3> <StyledGameDetailsP>{game.minimum_system_requirements.storage}</StyledGameDetailsP> </span>
+                            </StyledGameDetailsDivCard></>) : <><StyledGameDetailsH3>Nenhum Requisito Mínimo</StyledGameDetailsH3></>}
                 </StyledGameDetailsReq>
             </StyledGameDetailsCard>
-
-            <Comments  saver={commentSave} id={game.id} />
-
+            <Comments saver={commentSave} id={game.id} />
             {(!comments) ? <StyledGameDetailsH3>Nenhum comentário ainda...</StyledGameDetailsH3> : comments.map((element, idx) => { return (<ShowComments gameId={match.id} id={idx} key={idx + 1} name={element.name} comment={element.comment} likes={element.likes} />) })}
-
-
-
         </>
-
-
         )
-
-
     )
 }

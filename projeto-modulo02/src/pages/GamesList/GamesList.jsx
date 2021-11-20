@@ -7,10 +7,9 @@ import GamesListRender from '../../components/GamesListRender/GamesListRender';
 
 export default function GamesList() {
     const [games, setGames] = useState();
- 
+
     const fetchingMemo = useMemo(() =>{
         return fetchingGames(setGames)},[])
-
 
     return (
         (!games) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -19,10 +18,8 @@ export default function GamesList() {
         </div> : (
             <>
                 <SharedBar> <SearchBar search='' /></SharedBar>
-
                 <GamesListRender info={games} />
             </>
-
         )
     )
 }

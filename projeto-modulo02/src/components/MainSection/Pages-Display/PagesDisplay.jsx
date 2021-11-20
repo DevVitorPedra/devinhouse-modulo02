@@ -14,10 +14,8 @@ export default function PagesDisplay() {
                 <Route path="/news" element={<News />} />
                 <Route path="/gameslist" element={<GamesList />} />
                 <Route path="/gamedetails/:id" element={<GameDetails />} />
-                <Route path="*" element={<NotFound/>}/>
-
+                <Route path="*" element={<NotFound />} />
             </Routes>
-
         </StyledDisplay>
     )
 }

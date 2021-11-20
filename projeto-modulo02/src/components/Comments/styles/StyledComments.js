@@ -49,8 +49,8 @@ export const StyledCommentsInput = styled.input`
     
 `
 export const StyledCommentsTextarea = styled.textarea`
-    max-width:400px;
-    min-width:400px;
+    max-width:200px;
+    min-width:100px;
     min-height:50px;
     max-height:50px;
     

@@ -11,8 +11,8 @@ export default function MainLogo() {
     <Logo className="logo">
       <Link className="logo-link" to={'/'}><StyledLogo>DEVinMMO</StyledLogo></Link>
       <MainMenu>
-           <LogoMenuButtons  ><Link className="side-menu-btn" to={'/gameslist'}>Jogos</Link></LogoMenuButtons>
-        <LogoMenuButtons >  <Link className="side-menu-btn" to={'/news'}>  Notícias</Link></LogoMenuButtons>
+           <LogoMenuButtons  ><Link className="logo-menu-btn" to={'/gameslist'}>Jogos</Link></LogoMenuButtons>
+        <LogoMenuButtons >  <Link className="logo-menu-btn" to={'/news'}>  Notícias</Link></LogoMenuButtons>
       </MainMenu>
      
     </Logo>

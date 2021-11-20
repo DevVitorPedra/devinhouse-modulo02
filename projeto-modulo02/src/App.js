@@ -19,7 +19,6 @@ function App() {
   return (
     <ThemeProvider theme={currentTheme}>
       <div className="App">
-
         <GlobalStyle />
         <Router>
           <MainHeader current={currentTheme} toggle={toggleTheme} />
@@ -31,7 +30,6 @@ function App() {
         </Router>
         <Footer />
       </div>
-
     </ThemeProvider>
   );
 }

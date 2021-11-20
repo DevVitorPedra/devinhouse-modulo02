@@ -8,7 +8,6 @@ export default function Intro() {
         <div>
             <SharedH1>Bem Vindo</SharedH1>
             <SharedP>Jogos e notícias do mundo dos games em um só lugar!!</SharedP>
-        </div>
-        
+        </div>   
     )
 }

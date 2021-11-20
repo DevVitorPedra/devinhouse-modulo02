@@ -23,7 +23,7 @@ body{
     transition:all 1.5s ease-out;
    
 }
-.side-menu-btn{
+.logo-menu-btn{
     width:100%;
     color:white;
     text-decoration:none;

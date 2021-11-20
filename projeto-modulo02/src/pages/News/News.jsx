@@ -6,16 +6,12 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import NewsRender from '../../components/NewsRender/NewsRender';
 
 export default function News() {
-
     const [news, setNews] = useState();
 
     useEffect(() => {
         fetchingNews(setNews)
-
     }, []);
 
-
-   
     return (
 
         (!news) ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

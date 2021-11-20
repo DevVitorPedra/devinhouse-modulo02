@@ -3,13 +3,11 @@ import { SearchContext } from '../Contexts/SearchContext'
 import { StyledLink, StyledNewsCard, StyledNewsDescription, StyledNewsTitle, StyledNewsImg } from './styles/StyledNewsRender'
 import { SharedBar } from '../SharedComponents/styles/StyledSharedComponents'
 export default function NewsRender(props) {
-
     const { value } = useContext(SearchContext)
     const filtered = props.info.filter((element) => {
         return element.title.toLowerCase().includes(value.toLowerCase())
     })
     
-
     return (
         <>
          <SharedBar>
@@ -17,7 +15,6 @@ export default function NewsRender(props) {
         <StyledNewsDescription>Resultados para "{value}" ({filtered.length})</StyledNewsDescription>}
         </SharedBar>
         {filtered.map((element, idx) => {
-
             return (
                 <StyledLink key={idx + 1} href={element.article_url} target="_blank" rel="noreferrer">
                     <StyledNewsCard >
