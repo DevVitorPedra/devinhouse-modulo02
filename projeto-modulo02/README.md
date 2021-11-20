@@ -21,7 +21,7 @@ O projeto foi finalizado, adequando os requisitos:
 - [x] Página de detalhes dos jogos com slide show
 - [x] Sistema de comentários com verificação de dados e sistema de likes
 - [x] Criação de componentes e organização do projeto
-- [x] Utilizaação de hooks avançados(useContext e useReducer)
+- [x] Utilização de hooks avançados(useContext e useReducer)
 - [x] Estilização utilizando styled components
 - [x] Criação de mais de um esquema de cores na aplicação(dark e light)
 - [x] Utilização correta dos endpoints
